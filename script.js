@@ -9,9 +9,10 @@ for (let i = 0; i < spanToggle.length; i++) {
   });
 }
 document.addEventListener("wheel", (e) => {
+  console.log(e);
   console.log(window.innerHeight);
   if (window.innerWidth > 800) {
-    if (e.deltaY === 150) {
+    if (e.deltaY > 0) {
       menu.style.transform = "translateY(-25vh)";
       window.addEventListener("scroll", () => {
         if (scrollY > window.innerHeight) {
