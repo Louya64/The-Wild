@@ -8,19 +8,19 @@ for (let i = 0; i < spanToggle.length; i++) {
     menu.classList.toggle("active");
   });
 }
+console.log(scrollY);
 document.addEventListener("wheel", (e) => {
-  console.log(e);
   console.log(window.innerHeight);
   if (window.innerWidth > 800) {
     if (e.deltaY > 0) {
       menu.style.transform = "translateY(-25vh)";
-      window.addEventListener("scroll", () => {
-        if (scrollY > window.innerHeight) {
-          menu.style.background = "black";
-        } else {
-          menu.style.background = "none";
-        }
-      });
+      // window.addEventListener("scroll", () => {
+      //   if (scrollY > window.innerHeight) {
+      //     menu.style.background = "black";
+      //   } else {
+      //     menu.style.background = "none";
+      //   }
+      // });
     } else {
       menu.style.transform = "translateY(0)";
     }
@@ -28,5 +28,12 @@ document.addEventListener("wheel", (e) => {
     toggleBtn.style.background = "black";
   } else {
     toggleBtn.style.background = "none";
+  }
+});
+window.addEventListener("scroll", () => {
+  if (scrollY > window.innerHeight) {
+    menu.style.background = "black";
+  } else {
+    menu.style.background = "none";
   }
 });
