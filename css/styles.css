@@ -178,15 +178,210 @@ nav #nav__logoMobil img {
 }
 
 main {
-  height: 300vh;
+  font-size: 4vw;
 }
 
-main #ribs {
+@media screen and (min-width: 800px) {
+  main section:not(.hero) {
+    width: 80vw;
+    margin: auto;
+    font-size: 3vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main section:not(.hero) {
+    width: 75vw;
+    margin: auto;
+    font-size: 2.4vw;
+  }
+}
+
+main h1,
+main h2 {
+  font-family: verdana;
+}
+
+main h1 {
+  font-size: 12vw;
+}
+
+@media screen and (min-width: 800px) {
+  main h1 {
+    font-size: 8vw;
+  }
+}
+
+main h2 {
+  font-size: 8vw;
+}
+
+@media screen and (min-width: 800px) {
+  main h2 {
+    font-size: 4vw;
+  }
+}
+
+#ribs {
   width: 100%;
   height: 100vh;
   -o-object-fit: cover;
   object-fit: cover;
   -webkit-filter: brightness(55%);
   filter: brightness(55%);
+}
+
+#homeIntro {
+  margin: 15vh auto;
+  text-align: center;
+  font-family: serif;
+}
+
+@media screen and (min-width: 1200px) {
+  #homeIntro {
+    margin: 25vh auto;
+  }
+}
+
+.homeCard {
+  position: relative;
+  height: 125vw;
+}
+
+@media screen and (min-width: 800px) {
+  .homeCard {
+    height: 90vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .homeCard {
+    height: 75vw;
+  }
+}
+
+.homeCard h2 {
+  background-color: black;
+  color: #c09628;
+  text-align: center;
+  font-family: verdana;
+  padding: 5px 0;
+  border-radius: 10px 10px 0 0;
+}
+
+.homeCard__img {
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+
+.homeCard__text {
+  color: #d8d7d7;
+  border: 2px inset #c09628;
+  background-color: #2c2c2c;
+  padding: 20px 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: 60vw;
+  width: 70%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+@media screen and (min-width: 800px) {
+  .homeCard__text {
+    top: 40vw;
+  }
+}
+
+.homeCard__text--left {
+  margin-left: 2vw;
+}
+
+.homeCard__text--right {
+  text-align: end;
+  margin-left: 23vw;
+}
+
+@media screen and (min-width: 800px) {
+  .homeCard__text--right {
+    margin-left: 20vw;
+  }
+}
+
+.homeEvents h2 {
+  background-color: black;
+  color: #c09628;
+  text-align: center;
+  font-family: verdana;
+  padding: 5px 0;
+  border-radius: 10px 10px 0 0;
+}
+
+.homeEvents__slider {
+  position: relative;
+  width: 100%;
+}
+
+.homeEvents__slider__item {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+}
+
+.homeEvents__slider__item.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: all 3s;
+  transition: all 3s;
+}
+
+.homeEvents__slider__item.active.activeEnd {
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+  -webkit-transition: all 3s;
+  transition: all 3s;
+}
+
+.homeEvents__slider__item__img {
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+}
+
+.homeEvents__slider__item__title {
+  position: absolute;
+  bottom: 5vw;
+  left: 1vw;
+  right: 1vw;
+  text-align: center;
+  color: #d8d7d7;
+  border: 2px inset #c09628;
+  background-color: #2c2c2c;
+  padding: 20px 10px;
+  border-radius: 10px;
+}
+
+.homeEvents__slider__item__title h3 {
+  font-size: 8vw;
+  padding-bottom: 4vw;
+}
+
+@media screen and (min-width: 800px) {
+  .homeEvents__slider__item__title h3 {
+    font-size: 4vw;
+  }
+}
+
+.homeEvents__slider__item:hover .homeEvents__slider__item__img {
+  opacity: 1;
+}
+
+.homeEvents__slider__item:hover .homeEvents__slider__item__title {
+  background-color: #acacac;
+  color: #2c2c2c;
 }
 /*# sourceMappingURL=styles.css.map */
