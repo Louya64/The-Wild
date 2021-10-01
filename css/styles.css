@@ -12,6 +12,12 @@ nav {
   z-index: 9;
 }
 
+@media screen and (min-width: 800px) {
+  nav {
+    height: auto;
+  }
+}
+
 nav #nav__logoMobil {
   position: absolute;
   top: 5%;
@@ -179,6 +185,7 @@ nav #nav__logoMobil img {
 
 main {
   font-size: 4vw;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 800px) {
@@ -270,7 +277,7 @@ body {
 }
 
 .caroussel .caroussel__chevron img {
-  width: 1em;
+  width: 0.3em;
   cursor: pointer;
 }
 
@@ -346,14 +353,14 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 3em;
+  font-size: 1em;
   color: #8f7607;
   text-align: center;
   z-index: 1;
 }
 
 .caroussel__container .caroussel__container__title button {
-  padding: 1.5em;
+  padding: 1em;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.486);
   border: none;

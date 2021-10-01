@@ -36,16 +36,14 @@ const sliderImg = document.querySelectorAll(".caroussel__container__image");
 const sliderTitle = document.querySelectorAll(".caroussel__container__title");
 //Image array
 const urlImage = [
-  "/Projets/TheWild/carouselAccueil/assets/restaurant.jpg",
-  "/Projets/TheWild/carouselAccueil/assets/platsHeader.jpg",
-  "/Projets/TheWild/carouselAccueil/assets/barPhoto.jpg",
-  "/Projets/TheWild/carouselAccueil/assets/newsphoto.jpg",
+  "assets/restaurant.jpg",
+  "assets/platsHeader.jpg",
+  "assets/barPhoto.jpg",
+  "assets/newsphoto.jpg",
 ];
 
 let count = 0;
-sliderImg[
-  count
-].style.backgroundImage = `url(/Projets/TheWild/carouselAccueil/assets/restaurant.jpg)`;
+sliderImg[count].style.backgroundImage = `url(assets/restaurant.jpg)`;
 function slideNext() {
   sliderImg[count].style.transform = "scale(1.0)";
   sliderTitle[count].style.zIndex = "0";
