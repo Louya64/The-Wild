@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 9;
+}
+
+@media screen and (min-width: 800px) {
+  nav {
+    height: auto;
+  }
+}
+
+nav #nav__logoMobil {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+nav #nav__logoMobil img {
+  width: 5em;
+}
+
+@media screen and (min-width: 800px) {
+  nav #nav__logoMobil {
+    display: none;
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(-100vh);
+          transform: translateY(-100vh);
+  font-family: sans-serif;
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+  background: black;
+  z-index: 20;
+}
+
+.menu.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.menu li {
+  list-style: none;
+  margin: 1em 0;
+}
+
+.menu li:first-child {
+  width: 7em;
+}
+
+@media screen and (min-width: 800px) {
+  .menu li:first-child {
+    width: auto;
+    margin-right: 9em;
+  }
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3em;
+  position: relative;
+  white-space: nowrap;
+  letter-spacing: 3px;
+}
+
+.menu li a img {
+  width: 100%;
+  height: auto;
+}
+
+.menu li a:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 0;
+  background: transparent;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  z-index: -1;
+}
+
+.menu li a:hover:after {
+  width: 80%;
+  background-color: white;
+}
+
+@media screen and (min-width: 800px) {
+  .menu {
+    position: fixed;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-size: 0.6em;
+    height: auto;
+    z-index: 9;
+    background: none;
+  }
+}
+
+.toggle-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 23px 0 0 20px;
+  cursor: pointer;
+  position: fixed;
+  z-index: 25;
+  padding: 0.3em;
+  border-radius: 10%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.toggle-btn span {
+  height: 0.2em;
+  width: 2.5em;
+  background: white;
+  margin: 3px 0;
+  -webkit-transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out;
+}
+
+.toggle-btn span:nth-child(1).active {
+  -webkit-transform: rotateZ(45deg) translate(6px, 7px);
+          transform: rotateZ(45deg) translate(6px, 7px);
+}
+
+.toggle-btn span:nth-child(2).active {
+  -webkit-transform: translateX(-50vh);
+          transform: translateX(-50vh);
+}
+
+.toggle-btn span:nth-child(3).active {
+  -webkit-transform: rotateZ(-45deg) translate(7px, -7px);
+          transform: rotateZ(-45deg) translate(7px, -7px);
+}
+
+@media screen and (min-width: 900px) {
+  .toggle-btn {
+    display: none;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
