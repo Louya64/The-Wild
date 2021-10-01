@@ -222,13 +222,153 @@ main h2 {
   }
 }
 
-#ribs {
-  width: 100%;
+@font-face {
+  font-family: "Font1";
+  src: url("fonts/courgette-v8-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Font2";
+  src: url("fonts/Ephesis-Regular.ttf") format("woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
   height: 100vh;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -webkit-filter: brightness(55%);
-  filter: brightness(55%);
+}
+
+.caroussel {
+  height: 100vh;
+  position: relative;
+}
+
+.caroussel .caroussel__chevron {
+  position: absolute;
+  font-size: 4em;
+  position: absolute;
+  font-size: 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  opacity: 0;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.caroussel .caroussel__chevron img {
+  width: 1em;
+  cursor: pointer;
+}
+
+.caroussel .caroussel__chevron.right {
+  right: 0;
+}
+
+.caroussel .caroussel__chevron.down {
+  padding-top: 70vh;
+  left: 50%;
+  opacity: 1;
+  font-size: 2.5em;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-animation: revealInfine 1s infinite;
+  animation: 1s linear 1s infinite alternate revealInfine;
+}
+
+.caroussel .caroussel__chevron.down:hover {
+  font-size: 3.5em;
+}
+
+@-webkit-keyframes revealInfine {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes revealInfine {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.caroussel__container {
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  font-family: "Font1";
+}
+
+.caroussel__container:first-child {
+  opacity: 1;
+}
+
+.caroussel__container .caroussel__container__image {
+  padding: 50vh 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  -webkit-filter: brightness(0.5);
+  filter: brightness(0.7);
+  position: relative;
+}
+
+.caroussel__container .caroussel__container__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 3em;
+  color: #8f7607;
+  text-align: center;
+  z-index: 1;
+}
+
+.caroussel__container .caroussel__container__title button {
+  padding: 1.5em;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.486);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  font-size: 0.3em;
+  letter-spacing: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.486);
+}
+
+.caroussel__container .caroussel__container__title button:hover {
+  background: black;
+  color: white;
 }
 
 #homeIntro {
