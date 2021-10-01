@@ -10,6 +10,10 @@ $black: rgb(44, 44, 44);
 $fontMain: serif;
 $fontTitles: verdana;
 $paragraphsFontSize: 4vw;
+$darkness: linear-gradient(
+    rgba(0, 0, 0, 0.5), 
+    rgba(0, 0, 0, 0.5)
+  );
 
 * {
   margin: 0;
@@ -442,6 +446,292 @@ body {
     }
   }
 }
+
+// ---------------------------START BAR-------------------------------------
+
+// FIRST SECTION
+
+.first-section {
+  background: $darkness,
+    url(../assets/bar.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+
+  .first-section__title {
+      color: $mainColor;
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+}
+
+// LITTLE PRESENTATION
+
+.little-presentation {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px 0 20px;
+  text-align: center;
+}
+
+// COCKTAILS SECTION
+
+.cocktails {
+
+  .cocktails__img {
+      height: 150px;
+      background: $darkness,
+        url(../assets/Cocktails/mojito.jpg);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
+          color: $mainColor;
+          text-transform: uppercase;
+      }
+  }
+}
+
+.cocktails__ListAndPrice {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  
+  li {
+      list-style: none;
+      padding-top: 10px;
+  }
+
+  .cocktails-price {
+      text-align: right;
+  }
+}
+
+// WINE SECTION
+
+.wine {
+  .wine__img {
+      height: 150px;
+      background: $darkness,
+        url(../assets/Vins/wine.jpg);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
+          color: $mainColor;
+          text-transform: uppercase;
+      }
+  }
+
+  .wine__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      padding: 20px 0 20px 0;
+
+      // WINE TEXT
+
+      .red-wine-txt {
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 1;
+          grid-row-end: 2;
+          justify-self: center;
+          align-self: center;
+          cursor: pointer;
+      }
+
+      .rose-txt {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 2;
+          grid-row-end: 3;
+          justify-self: center;
+          align-self: center;
+      }
+
+      .white-wine-txt {
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 3;
+          grid-row-end: 4;
+          justify-self: center;
+          align-self: center;
+      }
+
+      .champagne-txt {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 4;
+          grid-row-end: 5;
+          justify-self: center;
+          align-self: center;
+      }
+
+      // WINE IMG
+
+      .red-wine-img {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 1;
+          grid-row-end: 2;
+          background-image: url(../assets/Vins/red-wine.png);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          height: 150px;
+      }
+
+      .rose-img {
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 2;
+          grid-row-end: 3;
+          background-image: url(../assets/Vins/Webp.net-resizeimage.png);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+      }
+
+      .white-wine-img {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 3;
+          grid-row-end: 4;
+          background-image: url(../assets/Vins/white-wine-removebg-preview.png);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+      }
+
+      .champagne-img {
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 4;
+          grid-row-end: 5;
+          background-image: url(../assets/Vins/champagne.png);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+      }
+
+      // MODAL
+
+      .modal-red-wine, .modal-rose, .modal-white-wine, .modal-champagne {
+          display: none;
+          position: fixed;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+
+          .modal-content {
+              background-color: black;
+              color: white;
+              margin: 50px auto;
+              border: 1px #888;
+              width: 80%;
+              height: 90%;
+              position: relative;
+
+              h3 {
+                  text-align: center;
+                  font-size: 30px;
+                  text-transform: uppercase;
+                  padding-top: 15px;
+              }
+
+              .close-red-wine, .close-rose, .close-white-wine, .close-champagne {
+                  color: #aaa;
+                  position: absolute;
+                  right: 10px;
+                  cursor: pointer;
+                  font-size: 30px;
+                  font-weight: bold;
+              }
+
+              .wine__modal-red-wine__tables, .wine__modal-red-wine__tables, .wine__modal-rose__tables, .wine__modal-champagne__tables {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+
+                  .wine__modal-red-wine__tables--bdx, .wine__modal-red-wine__tables--bourgogne, .wine__modal-red-wine__tables--rhone, .wine__modal-white-wine__tables--bdx, .wine__modal-white-wine__tables--bourgogne, .wine__modal-white-wine__tables--loire, .wine__modal-rose__tables--roses, .wine__modal-champagne__tables--champagne {
+                      margin-top: 10px;
+                      width: 100%;
+
+                      .title-wine {
+                          padding-bottom: 10px;
+                          text-transform: uppercase;
+                          font-weight: bold;
+                          text-align: center;
+                      }
+
+                      .name-wine {
+                          text-align: left;
+                          font-weight: normal;
+                          line-height: 1.5em;
+                          padding-left: 10px;
+                          padding-right: 5px;
+                      }
+
+                      .price-wine {
+                          text-align: right;
+                      }
+                  }
+              }
+          }
+      }
+  }
+}
+
+// REVEAL WINE SECTION
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50%);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1s;
+}
+
+// SOFTS SECTION
+
+.softs {
+  .softs__img {
+      height: 150px;
+      background: $darkness,
+        url(../assets/Softs/smoothies-3176371_1280.jpg);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
+          color: $mainColor;
+          text-transform: uppercase;
+      }
+  }
+}
+
+// ---------------------------END BAR-------------------------------------
+
 // --------------------FOOTER--------------------------
 // footer First Mobil
 
