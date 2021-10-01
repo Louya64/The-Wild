@@ -683,8 +683,8 @@ main h2 {
 
 .reveal {
   opacity: 0;
-  -webkit-transform: translateY(-60%);
-          transform: translateY(-60%);
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
 }
 
 .reveal-visible {
