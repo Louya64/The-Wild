@@ -36,6 +36,7 @@ const sliderImg = document.querySelectorAll(".caroussel__container__image");
 const sliderTitle = document.querySelectorAll(".caroussel__container__title");
 //Image array
 const urlImage = [
+
   "assets/restaurant.jpg",
   "assets/platsHeader.jpg",
   "assets/barPhoto.jpg",
@@ -44,6 +45,7 @@ const urlImage = [
 
 let count = 0;
 sliderImg[count].style.backgroundImage = `url(assets/restaurant.jpg)`;
+
 function slideNext() {
   sliderImg[count].style.transform = "scale(1.0)";
   sliderTitle[count].style.zIndex = "0";

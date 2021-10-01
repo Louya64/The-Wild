@@ -224,7 +224,9 @@ body {
     transition: 0.5s ease-in-out;
 
     img {
+
       width: 0.3em;
+
       cursor: pointer;
     }
     &.right {
@@ -293,13 +295,18 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
     font-size: 1em;
+
+
     color: rgb(143, 118, 7);
     text-align: center;
     z-index: 1;
 
     button {
       padding: 1em;
+
+
       cursor: pointer;
       background: rgba(255, 255, 255, 0.486);
       border: none;

@@ -278,6 +278,8 @@ body {
 
 .caroussel .caroussel__chevron img {
   width: 0.3em;
+
+
   cursor: pointer;
 }
 
@@ -353,14 +355,20 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+
   font-size: 1em;
+
+
   color: #8f7607;
   text-align: center;
   z-index: 1;
 }
 
 .caroussel__container .caroussel__container__title button {
+
   padding: 1em;
+
+
   cursor: pointer;
   background: rgba(255, 255, 255, 0.486);
   border: none;
