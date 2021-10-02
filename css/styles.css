@@ -5,6 +5,12 @@
           box-sizing: border-box;
 }
 
+.btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 nav {
   position: absolute;
   width: 100%;
@@ -189,18 +195,20 @@ main {
 }
 
 @media screen and (min-width: 800px) {
-  main section:not(.hero) {
-    width: 80vw;
-    margin: auto;
-    font-size: 3vw;
+  main {
+    font-size: 2vw;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  main section:not(.hero) {
-    width: 75vw;
-    margin: auto;
+  main {
     font-size: 2.4vw;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  main {
+    font-size: 1.6vw;
   }
 }
 
@@ -278,8 +286,6 @@ body {
 
 .caroussel .caroussel__chevron img {
   width: 0.3em;
-
-
   cursor: pointer;
 }
 
@@ -355,20 +361,14 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-
   font-size: 1em;
-
-
   color: #8f7607;
   text-align: center;
   z-index: 1;
 }
 
 .caroussel__container .caroussel__container__title button {
-
   padding: 1em;
-
-
   cursor: pointer;
   background: rgba(255, 255, 255, 0.486);
   border: none;
@@ -392,15 +392,178 @@ body {
   font-family: serif;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 800px) {
   #homeIntro {
-    margin: 25vh auto;
+    margin: 25vh 5vw;
   }
 }
 
+@media screen and (min-width: 1200px) {
+  #homeIntro {
+    margin: 25vh 10vw;
+  }
+}
+
+.home-restau {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 2fr 3fr;
+      grid-template-columns: 2fr 2fr 3fr;
+  -ms-grid-rows: 2fr 1fr;
+      grid-template-rows: 2fr 1fr;
+}
+
+@media screen and (max-width: 1200px) {
+  .home-restau {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .home-restau {
+    display: none;
+  }
+}
+
+.home-restau__img {
+  width: 90%;
+  padding: 1vw;
+}
+
+.home-restau__img1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.home-restau__img2 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.home-restau__img3 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.home-restau__img4 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.home-restau__text1 {
+  padding: 0 1vw;
+  line-height: 2.4vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.home-restau__text1 h2 {
+  margin-bottom: 2vw;
+  color: #c09628;
+  font-size: 4.4vw;
+  font-family: verdana;
+}
+
+@media screen and (max-width: 1200px) {
+  .home-restau__text1 h2 {
+    font-size: 4vw;
+  }
+}
+
+.home-restau__text2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home-bar {
+  margin: 35vh auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .home-bar {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .home-bar {
+    display: none;
+  }
+}
+
+.home-bar h2 {
+  margin-bottom: 2vw;
+  color: #c09628;
+  font-size: 4.8vw;
+  font-family: verdana;
+}
+
+@media screen and (max-width: 1200px) {
+  .home-bar h2 {
+    font-size: 4vw;
+  }
+}
+
+.home-bar__containerImg img {
+  width: 45%;
+  height: auto;
+  padding: 0 2vw;
+  margin-bottom: 10vh;
+}
+
+.home-bar p {
+  padding: 2vh 2vw;
+}
+
 .homeCard {
+  display: none;
   position: relative;
   height: 125vw;
+}
+
+@media screen and (max-width: 800px) {
+  .homeCard {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -465,7 +628,7 @@ body {
 }
 
 .homeEvents {
-  height: 100vh;
+  height: 80vh;
 }
 
 .homeEvents h2 {
