@@ -15,249 +15,393 @@
 // 	height: 100vh;
 // }
 .restoMainContent {
-	font-size: $paragraphsFontSize * 0.3;
+  font-size: $paragraphsFontSize * 0.3;
 }
+$goldColor: rgb(143, 118, 7);
 img {
-	width: 100%;
-	height: auto;
+  width: 100%;
+  height: auto;
 }
 .header {
-	height: 100vh;
+  height: 100vh;
 }
 .header__container {
-	display: grid;
-	grid-template-columns: 1.2fr 0.7fr 0.3fr;
-	grid-template-rows: 1fr;
-	height: 100vh;
+  display: grid;
+  grid-template-columns: 1.2fr 0.7fr 0.3fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
 
-	.header__container--image {
-		grid-area: 1/1/2/2;
-		background: url("../assets/resto/food-1828243_1280.jpg");
-		background-size: cover;
-		-webkit-filter: brightness(0.7);
-		filter: brightness(0.7);
-	}
+  .header__container--image {
+    grid-area: 1/1/2/2;
+    background: url("../assets/resto/food-1828243_1280.jpg");
+    background-size: cover;
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+  }
 
-	.header__container--title {
-		background: black;
-		grid-area: 1/2/2/3;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+  .header__container--title {
+    background: black;
+    grid-area: 1/2/2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-		h1 {
-			color: rgb(143, 118, 7);
-			font-size: 3em;
-			font-family: "Font1";
-		}
-	}
-	.header__container--grid-image {
-		grid-area: 1/3/2/4;
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: repeat(4, 1fr);
+    h1 {
+      color: rgb(143, 118, 7);
+      font-size: 3em;
+      font-family: "Font1";
+    }
+  }
+  .header__container--grid-image {
+    grid-area: 1/3/2/4;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
 
-		div:nth-child(1) {
-			background: url("../assets/resto/india-1481497_1280.jpg");
-			background-size: cover;
-			background-position: center;
-		}
-		div:nth-child(2) {
-			background: url("../assets/resto//raspberry-6093284_1280.jpg");
-			background-size: cover;
-			background-position: center;
-		}
-		div:nth-child(3) {
-			background: url("../assets/resto/starter-387839_1280.jpg");
-			background-size: cover;
-			background-position: center;
-		}
-		div:nth-child(4) {
-			background: url("../assets/resto/bruschetta-4282898_1280.jpg");
-			background-size: cover;
-			background-position: center;
-		}
-		div {
-			-webkit-filter: brightness(0.7);
-			filter: brightness(0.7);
-		}
-	}
+    div:nth-child(1) {
+      background: url("../assets/resto/india-1481497_1280.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    div:nth-child(2) {
+      background: url("../assets/resto//raspberry-6093284_1280.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    div:nth-child(3) {
+      background: url("../assets/resto/starter-387839_1280.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    div:nth-child(4) {
+      background: url("../assets/resto/bruschetta-4282898_1280.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    div {
+      -webkit-filter: brightness(0.7);
+      filter: brightness(0.7);
+    }
+  }
 }
 
 .presentation {
-	height: 70vh;
-	text-align: center;
-	background: rgba(143, 118, 7, 0.295);
-	position: relative;
+  height: 70vh;
+  text-align: center;
+  background: rgba(143, 118, 7, 0.295);
+  position: relative;
 
-	.presentation__container {
-		display: flex;
-		align-items: center;
-	}
+  .presentation__container {
+    display: flex;
+    align-items: center;
+  }
 }
 .presentation__container--text {
-	background: white;
-	padding: 2em;
-	width: 50%;
-	height: 350px;
-	margin: -3% 0 0 5%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+  background: white;
+  padding: 2em;
+  width: 50%;
+  height: 350px;
+  margin: -3% 0 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-	p {
-		width: 70%;
-		margin: 2em auto;
-	}
+  p {
+    width: 70%;
+    margin: 2em auto;
+  }
 }
 .presentation__container--image {
-	position: absolute;
-	top: 30%;
-	right: 5%;
-	width: 45%;
-	box-shadow: 12px 11px 0px -2px #ffffff;
-	line-height: 0;
-	z-index: 1;
+  position: absolute;
+  top: 30%;
+  right: 5%;
+  width: 45%;
+  box-shadow: 12px 11px 0px -2px #ffffff;
+  line-height: 0;
+  z-index: 1;
 
-	img {
-		width: 100%;
-	}
+  img {
+    width: 100%;
+  }
 }
 .starter {
-	position: relative;
+  position: relative;
 
-	.starter__title {
-		background: url("../assets/resto/starter-387839_1280.jpg");
-		background-size: cover;
-		background-attachment: fixed;
-		background-position: center;
-		padding: 30vh 0;
-		text-align: center;
-		position: relative;
+  .starter__title {
+    background: url("../assets/resto/starter-387839_1280.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 30vh 0;
+    text-align: center;
+    position: relative;
 
-		h2 {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			color: rgb(143, 118, 7);
-			font-size: 4em;
-			font-family: "Font2";
-			letter-spacing: 10px;
-		}
+    h2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgb(143, 118, 7);
+      font-size: 4em;
+      font-family: "Font2";
+      letter-spacing: 10px;
+    }
 
-		&::before {
-			content: "";
-			background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-			color: white;
-		}
-	}
+    &::before {
+      content: "";
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: white;
+    }
+  }
 }
 .gridstarter {
-	background: rgba(143, 118, 7, 0.295);
+  background: rgba(143, 118, 7, 0.295);
 }
 .startergrid {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(2, 1fr);
-	padding: 4em;
-	gap: 0.5em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 4em;
+  gap: 0.5em;
 
-	& > * {
-		padding: 100px 0;
-		background: white;
-		text-align: center;
-	}
-	div:nth-child(1) {
-		background: url("../assets/resto/starter-387839_1280.jpg");
-		background-position: center;
-		background-size: cover;
-		grid-area: 1/1;
-	}
-	div:nth-child(2) {
-		grid-area: 1/2;
+  & > * {
+    padding: 100px 0;
+    background: white;
+    text-align: center;
+  }
+  div:nth-child(1) {
+    background: url("../assets/resto/starter-387839_1280.jpg");
+    background-position: center;
+    background-size: cover;
+    grid-area: 1/1;
+  }
+  div:nth-child(2) {
+    grid-area: 1/2;
 
-		&:hover {
-			grid-area: 1/1/1/3;
-		}
-	}
-	div:nth-child(3) {
-		grid-area: 1/3;
-		background: url("../assets/resto/india-1481497_1280.jpg");
-		background-position: center;
-		background-size: cover;
-	}
-	div:nth-child(4) {
-		grid-area: 1/4;
+    &:hover {
+      grid-area: 1/1/1/3;
+    }
+  }
+  div:nth-child(3) {
+    grid-area: 1/3;
+    background: url("../assets/resto/india-1481497_1280.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  div:nth-child(4) {
+    grid-area: 1/4;
 
-		&:hover {
-			grid-area: 1/3/2/5;
-		}
-	}
-	div:nth-child(5) {
-		grid-area: 2/2;
-		background: url("../assets/resto/pizza-6478478_1280.jpg");
-		background-position: center;
-		background-size: cover;
-	}
-	div:nth-child(6) {
-		grid-area: 2/1;
+    &:hover {
+      grid-area: 1/3/2/5;
+    }
+  }
+  div:nth-child(5) {
+    grid-area: 2/2;
+    background: url("../assets/resto/pizza-6478478_1280.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  div:nth-child(6) {
+    grid-area: 2/1;
 
-		&:hover {
-			grid-area: 2/1/3/3;
-		}
-	}
-	div:nth-child(7) {
-		grid-area: 2/4;
-		background: url("../assets/resto/mediterranean-cuisine-2378758_1280.jpg");
-		background-position: center;
-		background-size: cover;
-	}
-	div:nth-child(8) {
-		grid-area: 2/3;
+    &:hover {
+      grid-area: 2/1/3/3;
+    }
+  }
+  div:nth-child(7) {
+    grid-area: 2/4;
+    background: url("../assets/resto/mediterranean-cuisine-2378758_1280.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  div:nth-child(8) {
+    grid-area: 2/3;
 
-		&:hover {
-			grid-area: 2/3/3/5;
-		}
-	}
+    &:hover {
+      grid-area: 2/3/3/5;
+    }
+  }
 }
 .meals {
-	position: relative;
+  position: relative;
 
-	h2 {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		color: rgb(143, 118, 7);
-		font-size: 4em;
-		font-family: "Font2";
-		letter-spacing: 10px;
-	}
+  h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(143, 118, 7);
+    font-size: 4em;
+    font-family: "Font2";
+    letter-spacing: 10px;
+  }
 
-	.meals__title {
-		background: url("../assets/resto/raspberry-6093284_1280.jpg");
-		background-size: cover;
-		background-attachment: fixed;
-		background-position: center;
-		padding: 30vh 0;
-		text-align: center;
-		position: relative;
+  .meals__title {
+    background: url("../assets/resto/raspberry-6093284_1280.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 30vh 0;
+    text-align: center;
+    position: relative;
 
-		&::before {
-			content: "";
-			background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-			color: white;
-		}
-	}
+    &::before {
+      content: "";
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: white;
+    }
+  }
+}
+
+.meals__main {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  height: 100vh;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(143, 118, 7, 0.3);
+  }
+}
+.meals__main--image {
+  width: 50%;
+  position: absolute;
+  top: 25%;
+  left: 8%;
+}
+.meals__main--text {
+  width: 45%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 0px 0px 10px white;
+  margin: -70px 0 0;
+  position: relative;
+  background: rgba(143, 118, 7, 0.7);
+  padding: 2em 0;
+  margin-right: 5em;
+
+  h3 {
+    margin-bottom: 1em;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+  }
+  ul {
+    text-align: center;
+  }
+}
+.meals__main--buttons {
+  position: absolute;
+  top: 60%;
+  right: 8%;
+
+  button {
+    padding: 1em;
+    background: $goldColor;
+    border: none;
+    width: 120px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    letter-spacing: 1px;
+    border: 1px solid $goldColor;
+
+    &:hover {
+      background: black;
+      color: $goldColor;
+      letter-spacing: 2px;
+    }
+    &.active {
+      background: black;
+      color: $goldColor;
+    }
+  }
+}
+.meals__main--text__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr 1fr;
+  overflow: hidden;
+
+  li {
+    list-style: none;
+    margin: 0.5em 0 0 0;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+    &:nth-child(1) {
+      grid-area: 1/1/3/3;
+      transform: translateY(-5vh);
+      opacity: 0;
+
+      &.active {
+        transform: translateY(0);
+        opacity: 1;
+        z-index: 8;
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(4),
+    &:nth-child(6),
+    &:nth-child(8),
+    &:nth-child(10) {
+      text-align: start;
+      transform: translateX(-50vh);
+      opacity: 0;
+
+      &.active {
+        transform: translate(0);
+        opacity: 1;
+      }
+    }
+    &:nth-child(3),
+    &:nth-child(5),
+    &:nth-child(7),
+    &:nth-child(9),
+    &:nth-child(11) {
+      text-align: end;
+      transform: translateX(50vh);
+      opacity: 0;
+
+      &.active {
+        transform: translate(0);
+        opacity: 1;
+      }
+    }
+  }
+}
+#fishMeal {
+  position: absolute;
+  background: none;
+  box-shadow: none;
+
+  &li {
+    transition-delay: 1s;
+  }
+}
+#vegeMeal {
+  @extend #fishMeal;
+
+  &li {
+    transition-delay: 1s;
+  }
 }

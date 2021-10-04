@@ -1052,6 +1052,176 @@ img {
   color: white;
 }
 
+.meals__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  height: 100vh;
+}
+
+.meals__main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(143, 118, 7, 0.3);
+}
+
+.meals__main--image {
+  width: 50%;
+  position: absolute;
+  top: 25%;
+  left: 8%;
+}
+
+.meals__main--text {
+  width: 45%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 0px 0px 10px white;
+          box-shadow: 0 0px 0px 10px white;
+  margin: -70px 0 0;
+  position: relative;
+  background: rgba(143, 118, 7, 0.7);
+  padding: 2em 0;
+  margin-right: 5em;
+}
+
+.meals__main--text h3 {
+  margin-bottom: 1em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+}
+
+.meals__main--text ul {
+  text-align: center;
+}
+
+.meals__main--buttons {
+  position: absolute;
+  top: 60%;
+  right: 8%;
+}
+
+.meals__main--buttons button {
+  padding: 1em;
+  background: #8f7607;
+  border: none;
+  width: 120px;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  letter-spacing: 1px;
+  border: 1px solid #8f7607;
+}
+
+.meals__main--buttons button:hover {
+  background: black;
+  color: #8f7607;
+  letter-spacing: 2px;
+}
+
+.meals__main--buttons button.active {
+  background: black;
+  color: #8f7607;
+}
+
+.meals__main--text__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr 1fr;
+  overflow: hidden;
+}
+
+.meals__main--text__grid li {
+  list-style: none;
+  margin: 0.5em 0 0 0;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.meals__main--text__grid li:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 1/1/3/3;
+  -webkit-transform: translateY(-5vh);
+          transform: translateY(-5vh);
+  opacity: 0;
+}
+
+.meals__main--text__grid li:nth-child(1).active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  z-index: 8;
+}
+
+.meals__main--text__grid li:nth-child(2), .meals__main--text__grid li:nth-child(4), .meals__main--text__grid li:nth-child(6), .meals__main--text__grid li:nth-child(8), .meals__main--text__grid li:nth-child(10) {
+  text-align: start;
+  -webkit-transform: translateX(-50vh);
+          transform: translateX(-50vh);
+  opacity: 0;
+}
+
+.meals__main--text__grid li:nth-child(2).active, .meals__main--text__grid li:nth-child(4).active, .meals__main--text__grid li:nth-child(6).active, .meals__main--text__grid li:nth-child(8).active, .meals__main--text__grid li:nth-child(10).active {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  opacity: 1;
+}
+
+.meals__main--text__grid li:nth-child(3), .meals__main--text__grid li:nth-child(5), .meals__main--text__grid li:nth-child(7), .meals__main--text__grid li:nth-child(9), .meals__main--text__grid li:nth-child(11) {
+  text-align: end;
+  -webkit-transform: translateX(50vh);
+          transform: translateX(50vh);
+  opacity: 0;
+}
+
+.meals__main--text__grid li:nth-child(3).active, .meals__main--text__grid li:nth-child(5).active, .meals__main--text__grid li:nth-child(7).active, .meals__main--text__grid li:nth-child(9).active, .meals__main--text__grid li:nth-child(11).active {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  opacity: 1;
+}
+
+#fishMeal, #vegeMeal {
+  position: absolute;
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#fishMealli {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+#vegeMealli {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
 .first-section {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../assets/bar/bar.jpg);
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/bar/bar.jpg);
