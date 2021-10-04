@@ -17,7 +17,7 @@
 .restoMainContent {
   font-size: $paragraphsFontSize * 0.3;
 }
-$goldColor: rgb(143, 118, 7);
+
 img {
   width: 100%;
   height: auto;
@@ -280,7 +280,7 @@ img {
   }
 }
 .meals__main--image {
-  width: 50%;
+  width: 45%;
   position: absolute;
   top: 25%;
   left: 8%;
@@ -316,13 +316,13 @@ img {
 
   button {
     padding: 1em;
-    background: $goldColor;
+    background: $mainldColor;
     border: none;
     width: 120px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
     letter-spacing: 1px;
-    border: 1px solid $goldColor;
+    border: 1px solid $mainColor;
 
     &:hover {
       background: black;
