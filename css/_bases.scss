@@ -1,0 +1,36 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.btn {
+	width: fit-content;
+}
+
+main {
+	font-size: $paragraphsFontSize;
+	overflow: hidden;
+	@media screen and (min-width: $mediaQueries800) {
+		font-size: $paragraphsFontSize * 0.5;
+	}
+	@media screen and (min-width: $mediaQueries1200) {
+		font-size: $paragraphsFontSize * 0.6;
+	}
+	@media screen and (min-width: $mediaQueries1600) {
+		font-size: $paragraphsFontSize * 0.4;
+	}
+	& h1 {
+		font-family: $fontTitles1;
+		font-size: $paragraphsFontSize * 3;
+		@media screen and (min-width: $mediaQueries800) {
+			font-size: $paragraphsFontSize * 2;
+		}
+	}
+	& h2 {
+		font-family: $fontTitles2;
+		font-size: $paragraphsFontSize * 2;
+		@media screen and (min-width: $mediaQueries800) {
+			font-size: $paragraphsFontSize;
+		}
+	}
+}
