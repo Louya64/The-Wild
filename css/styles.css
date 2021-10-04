@@ -708,6 +708,278 @@ nav #nav__logoMobil img {
   color: #2c2c2c;
 }
 
+.nousconnaitre-hero {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../assets/nousconnaitre/nousConnaitre-hero.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/nousconnaitre/nousConnaitre-hero.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.nousconnaitre-hero h1 {
+  width: 100%;
+  text-align: center;
+  color: #8f7607;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.nousconnaitre-presentation {
+  text-align: center;
+  width: 60%;
+  margin: 10vh auto;
+}
+
+.nousconnaitre-presentation h2 {
+  color: #8f7607;
+}
+
+.nousconnaitre-presentation p {
+  padding: 5vh 0;
+}
+
+.nousconnaitre-cuisine {
+  text-align: center;
+}
+
+.nousconnaitre-cuisine h2 {
+  color: #8f7607;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/nousconnaitre/nousconnaitre-fondCuisine.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/nousconnaitre/nousconnaitre-fondCuisine.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 8vw 0;
+}
+
+.nousconnaitre-cuisine aside {
+  max-width: 55%;
+}
+
+.nousconnaitre-cuisine__chef {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  .nousconnaitre-cuisine__chef {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.nousconnaitre-cuisine__chef h3 {
+  color: #8f7607;
+}
+
+.nousconnaitre-cuisine__chef p {
+  padding: 5vh 5vw;
+}
+
+.nousconnaitre-cuisine__chef aside img {
+  padding: 5vw;
+}
+
+.nousconnaitre-cuisine__poubelle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  .nousconnaitre-cuisine__poubelle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.nousconnaitre-cuisine__poubelle h3 {
+  font-size: 5.2vw;
+  color: #8f7607;
+}
+
+@media screen and (max-width: 800px) {
+  .nousconnaitre-cuisine__poubelle h3 {
+    padding-top: 10vh;
+  }
+}
+
+.nousconnaitre-cuisine__poubelle p {
+  padding: 5vh 5vw;
+}
+
+.nousconnaitre-cuisine__poubelle aside img {
+  padding: 5vw;
+}
+
+.nousconnaitre-salle {
+  text-align: center;
+}
+
+.nousconnaitre-salle h2 {
+  color: #8f7607;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/nousconnaitre/nousconnaitre-fondSalle.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/nousconnaitre/nousconnaitre-fondSalle.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 8vw 0;
+}
+
+.nousconnaitre-salle__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  -ms-grid-rows: (1fr)[9];
+      grid-template-rows: repeat(9, 1fr);
+}
+
+.nousconnaitre-salle__container > article {
+  position: relative;
+}
+
+.nousconnaitre-salle__container img {
+  padding: 2vw 2vw 3vw 2vw;
+}
+
+.nousconnaitre-salle__container h3 {
+  position: absolute;
+  bottom: -0.5vw;
+  left: 2vw;
+  color: #8f7607;
+  font-size: 3.2vw;
+}
+
+.nousconnaitre-salle__container--salle {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/nousconnaitre/nousConnaitre-person3.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/nousconnaitre/nousConnaitre-person3.jpg");
+  background-size: cover;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2 / 5;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  grid-row: 2 / 5;
+}
+
+@media screen and (max-width: 800px) {
+  .nousconnaitre-salle__container--salle {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+  }
+}
+
+.nousconnaitre-salle__container--bar {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/nousconnaitre/nousConnaitre-person4.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/nousconnaitre/nousConnaitre-person4.jpg");
+  background-size: cover;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-column: 5 / 7;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2 / 4;
+}
+
+@media screen and (max-width: 800px) {
+  .nousconnaitre-salle__container--bar {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 3;
+    grid-column: 5 / 8;
+  }
+}
+
+.nousconnaitre-salle__container--bar h3 {
+  left: auto;
+  right: 2vw;
+}
+
+.nousconnaitre-salle__container--scene {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/nousconnaitre/nousconnaitre-person5.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/nousconnaitre/nousconnaitre-person5.jpg");
+  background-size: cover;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-column: 5 / 7;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  grid-row: 4 / 6;
+}
+
+@media screen and (max-width: 800px) {
+  .nousconnaitre-salle__container--scene {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 3;
+    grid-column: 5 / 8;
+  }
+}
+
+.nousconnaitre-salle__container--scene h3 {
+  left: auto;
+  right: 2vw;
+}
+
+.nousconnaitre-salle__container--text {
+  padding: 5vw;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 5;
+  grid-column: 2 / 7;
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 2;
+  grid-row: 7 / 9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  .nousconnaitre-salle__container--text {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 7;
+    grid-column: 1 / 8;
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 4;
+    grid-row: 6 / 10;
+  }
+  .nousconnaitre-salle__container--text .display-large {
+    display: none;
+  }
+}
+
+.nousconnaitre-salle__container--text .display-large {
+  padding-bottom: 3vh;
+}
+
 .restoMainContent {
   font-size: 1.2vw;
 }
