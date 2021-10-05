@@ -15,7 +15,12 @@ a {
 	color: $white;
 	border: 1px solid $black;
 	border-radius: 10px;
-	box-shadow: 2px 2px 3px $black;
+	transition: all 0.3s;
+}
+.btn:hover {
+	background-color: $black;
+	color: $mainColor;
+	transition: all 0.3s;
 }
 
 main {
