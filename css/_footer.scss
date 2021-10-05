@@ -7,11 +7,14 @@
 	justify-content: space-around;
 	align-items: center;
 	background: black;
-	width: 100wh;
+	width: 100vw;
 	color: white;
-	margin-bottom: 1rem;
+	
 
 	&__img {
+		text-align: center;
+		margin: auto;
+		width: 60%;
 		padding-top: 1rem;
 		padding-bottom: 1rem;
 	}
@@ -57,6 +60,7 @@
 			}
 
 			input[type="button"] {
+				border-radius: 0 10px 10px 0px;
 				grid-row: 2/3;
 				grid-column: 2/3;
 			}
