@@ -1,2 +1,1 @@
-Comming soon:  
-* avis des clients / notes etc...
+THE WILD RESTAURANT

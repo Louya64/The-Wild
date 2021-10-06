@@ -64,14 +64,10 @@
 
 .hour_pic {
   width: 100%;
-  //min-height: 25vh;
   height: 25vh;
   background-image: url("../assets/contact/time.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  
-  //background-attachment: fixed;
-  //background-position: center;
 
   h2 {
     padding-left: 1rem;
@@ -130,13 +126,10 @@ table {
 
   .hour_pic {
     width: 100%;
-    //min-height: 25vh;
     height: 25vh;
     background-image: url("../assets/contact/time.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    //background-attachment: fixed;
-    //background-position: center;
 
     h2 {
       padding-left: 1rem;
@@ -145,6 +138,4 @@ table {
       color: white;
     }
   }
-
-
 }

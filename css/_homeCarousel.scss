@@ -1,21 +1,5 @@
-// // Hero-header caroussel
-// @font-face {
-// 	font-family: "Font1";
-// 	src: url("fonts/courgette-v8-latin-regular.woff2") format("woff2");
-// }
-// @font-face {
-// 	font-family: "Font2";
-// 	src: url("fonts/Ephesis-Regular.ttf") format("woff2");
-// }
+// Hero-header caroussel
 
-// * {
-// 	margin: 0;
-// 	padding: 0;
-// 	box-sizing: border-box;
-// }
-// body {
-// 	height: 100vh;
-// }
 .caroussel {
 	height: 100vh;
 	position: relative;
@@ -82,7 +66,6 @@
 	width: 100%;
 	opacity: 0;
 	transition: 1s ease-in-out;
-	// font-family: "Font1";
 	font-family: $fontTitles1;
 
 	&:first-child {
@@ -104,10 +87,7 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-
 		font-size: 1em;
-
-		// color: rgb(143, 118, 7);
 		color: $mainColor;
 		text-align: center;
 		z-index: 1;
@@ -116,7 +96,6 @@
 			padding: 1em;
 
 			cursor: pointer;
-			// background: rgba(255, 255, 255, 0.486);
 			background: $colorBgBtns;
 			border: none;
 			border-radius: 25px;
@@ -124,12 +103,9 @@
 			transition: 0.5s ease-in-out;
 			font-size: 0.3em;
 			letter-spacing: 5px;
-			// border: 1px solid rgba(255, 255, 255, 0.486);
 			border: 1px solid $colorBgBtns;
 
 			&:hover {
-				// background: black;
-				// color: white;
 				background: $black;
 				color: $white;
 			}
