@@ -13,7 +13,7 @@
     color: white;
   }
 }
-
+ 
 .section_contact {
   display: flex;
   justify-content: space-around;
@@ -77,7 +77,7 @@
   }
 }
 
-table {
+.horaire {
   margin-top: 5rem;
   display: flex;
   justify-content: center;
@@ -85,6 +85,26 @@ table {
     text-align: center;
     padding-right: 5rem;
     padding-bottom: 2rem;
+  }
+}
+
+.link {
+  & h2 {
+    color: $mainColor;
+    padding: 10vh 0 1vh 2vw; 
+    background: url('../assets/contact/Liens.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__container {
+    width: fit-content;
+    margin: 8vh auto;
+    & .linkFriend {
+      text-shadow: 2px 2px 3px $mainColor;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
