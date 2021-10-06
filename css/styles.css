@@ -2492,6 +2492,18 @@ img {
   border-radius: 15px;
 }
 
+@media screen and (min-width: 800px) {
+  .wine .wine__list .modal-red-wine .modal-content,
+  .wine .wine__list .modal-rose .modal-content,
+  .wine .wine__list .modal-white-wine .modal-content,
+  .wine .wine__list .modal-champagne .modal-content {
+    padding: 0 50px 0 50px;
+    width: 60%;
+    height: 80%;
+    top: 10%;
+  }
+}
+
 .wine .wine__list .modal-red-wine .modal-content h3,
 .wine .wine__list .modal-rose .modal-content h3,
 .wine .wine__list .modal-white-wine .modal-content h3,
@@ -3120,6 +3132,7 @@ img {
 @media screen and (min-width: 800px) {
   .softs__img {
     height: 250px;
+    background-attachment: fixed;
   }
 }
 
