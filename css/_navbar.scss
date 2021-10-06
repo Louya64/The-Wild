@@ -50,7 +50,7 @@ nav {
       width: 7em;
 
       @media screen and (min-width: $mediaQueries800) {
-        width: auto;
+        width: 100px;
         margin-right: 9em;
       }
     }
