@@ -1,7 +1,7 @@
 body {
 	background-color: $bgMainColor;
 }
-#homeIntro {
+.homeIntro {
 	margin: 10vh auto;
 	text-align: center;
 	font-family: $police1;
@@ -20,8 +20,14 @@ body {
 		padding: 3vh 5vw;
 		font-size: $paragraphsFontSize * 0.4;
 	}
-	& .btn {
-		margin-top: 2vh;
+	& h2 {
+		margin-bottom: 2vw;
+		color: $mainColor;
+		font-size: $paragraphsFontSize * 1.8;
+		font-family: $fontTitles2;
+	}
+	&__text {
+		padding-bottom: 1vh;
 	}
 }
 
