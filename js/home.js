@@ -1,33 +1,3 @@
-// const toggleBtn = document.querySelector(".toggle-btn");
-// const spanToggle = toggleBtn.querySelectorAll("span");
-// const menu = document.querySelector(".menu");
-
-// for (let i = 0; i < spanToggle.length; i++) {
-// 	toggleBtn.addEventListener("click", () => {
-// 		spanToggle[i].classList.toggle("active");
-// 		menu.classList.toggle("active");
-// 	});
-// }
-// document.addEventListener("wheel", (e) => {
-// 	if (window.innerWidth > 800) {
-// 		if (e.deltaY > 0) {
-// 			menu.style.transform = "translateY(-25vh)";
-// 		} else {
-// 			menu.style.transform = "translateY(0)";
-// 		}
-// 	} else if (scrollY >= window.innerHeight) {
-// 		toggleBtn.style.background = "black";
-// 	} else {
-// 		toggleBtn.style.background = "none";
-// 	}
-// });
-// window.addEventListener("scroll", () => {
-// 	if (scrollY > window.innerHeight) {
-// 		menu.style.background = "black";
-// 	} else {
-// 		menu.style.background = "none";
-// 	}
-// });
 // ------------------Caroussel Home--------------
 const sliders = document.querySelectorAll(".caroussel__container");
 const sliderImg = document.querySelectorAll(".caroussel__container__image");
@@ -116,27 +86,174 @@ document.querySelector(".down").addEventListener("click", () => {
 });
 // End scroll chevrons
 // ---------------End caroussel Home---------------------
+//////////////////////////////////////////////////////////
 ///////////////// slider home  ///////////////////////////
+
 const homeSliderItems = document.querySelectorAll(".homeEvents__slider__item");
 let i = 0;
 showSlides();
 
 function showSlides() {
-	if (i === 0) {
-		homeSliderItems[homeSliderItems.length - 2].classList.remove("active");
-		homeSliderItems[homeSliderItems.length - 2].classList.remove("activeEnd");
-		homeSliderItems[homeSliderItems.length - 1].classList.add("activeEnd");
-		homeSliderItems[i].classList.add("active");
-	} else if (i === 1) {
-		homeSliderItems[homeSliderItems.length - 1].classList.remove("active");
-		homeSliderItems[homeSliderItems.length - 1].classList.remove("activeEnd");
-		homeSliderItems[i - 1].classList.add("activeEnd");
-		homeSliderItems[i].classList.add("active");
+	if (window.innerWidth < 800) {
+		if (i === 0) {
+			homeSliderItems[homeSliderItems.length - 2].classList.remove("active");
+			homeSliderItems[homeSliderItems.length - 2].classList.remove("activeEnd");
+			homeSliderItems[homeSliderItems.length - 1].classList.add("activeEnd");
+			homeSliderItems[i].classList.add("active");
+		} else if (i === 1) {
+			homeSliderItems[homeSliderItems.length - 1].classList.remove("active");
+			homeSliderItems[homeSliderItems.length - 1].classList.remove("activeEnd");
+			homeSliderItems[i - 1].classList.add("activeEnd");
+			homeSliderItems[i].classList.add("active");
+		} else {
+			homeSliderItems[i - 2].classList.remove("active");
+			homeSliderItems[i - 2].classList.remove("activeEnd");
+			homeSliderItems[i - 1].classList.add("activeEnd");
+			homeSliderItems[i].classList.add("active");
+		}
+	} else if (window.innerWidth >= 800 && window.innerWidth <= 1200) {
+		if (i === 0) {
+			if (
+				!homeSliderItems[homeSliderItems.length - 1].classList.contains(
+					"activeLeft"
+				)
+			) {
+				homeSliderItems[homeSliderItems.length - 1].classList.add(
+					"activeRight"
+				);
+				homeSliderItems[homeSliderItems.length - 1].classList.add("activeLeft");
+			}
+			homeSliderItems[homeSliderItems.length - 3].classList.remove(
+				"activeRight"
+			);
+			homeSliderItems[homeSliderItems.length - 3].classList.remove(
+				"activeLeft"
+			);
+			homeSliderItems[homeSliderItems.length - 3].classList.remove("activeEnd");
+			homeSliderItems[homeSliderItems.length - 2].classList.add("activeEnd");
+			homeSliderItems[homeSliderItems.length - 1].classList.add("activeLeft");
+			homeSliderItems[i].classList.add("activeRight");
+		} else if (i === 1) {
+			homeSliderItems[homeSliderItems.length - 2].classList.remove(
+				"activeRight"
+			);
+			homeSliderItems[homeSliderItems.length - 2].classList.remove(
+				"activeLeft"
+			);
+			homeSliderItems[homeSliderItems.length - 2].classList.remove("activeEnd");
+			homeSliderItems[homeSliderItems.length - 1].classList.add("activeEnd");
+			homeSliderItems[i - 1].classList.add("activeLeft");
+			homeSliderItems[i].classList.add("activeRight");
+		} else if (i === 2) {
+			homeSliderItems[homeSliderItems.length - 1].classList.remove(
+				"activeRight"
+			);
+			homeSliderItems[homeSliderItems.length - 1].classList.remove(
+				"activeLeft"
+			);
+			homeSliderItems[homeSliderItems.length - 1].classList.remove("activeEnd");
+			homeSliderItems[i - 2].classList.add("activeEnd");
+			homeSliderItems[i - 1].classList.add("activeLeft");
+			homeSliderItems[i].classList.add("activeRight");
+		} else {
+			homeSliderItems[i - 3].classList.remove("activeRight");
+			homeSliderItems[i - 3].classList.remove("activeLeft");
+			homeSliderItems[i - 3].classList.remove("activeEnd");
+			homeSliderItems[i - 2].classList.add("activeEnd");
+			homeSliderItems[i - 1].classList.add("activeLeft");
+			homeSliderItems[i].classList.add("activeRight");
+		}
 	} else {
-		homeSliderItems[i - 2].classList.remove("active");
-		homeSliderItems[i - 2].classList.remove("activeEnd");
-		homeSliderItems[i - 1].classList.add("activeEnd");
-		homeSliderItems[i].classList.add("active");
+		if (i === 0) {
+			if (
+				!homeSliderItems[homeSliderItems.length - 1].classList.contains(
+					"activeRight"
+				)
+			) {
+				homeSliderItems[homeSliderItems.length - 1].classList.add(
+					"activeRight"
+				);
+				homeSliderItems[homeSliderItems.length - 1].classList.add(
+					"activeMiddle"
+				);
+				homeSliderItems[homeSliderItems.length - 2].classList.add(
+					"activeRight"
+				);
+				homeSliderItems[homeSliderItems.length - 2].classList.add(
+					"activeMiddle"
+				);
+				homeSliderItems[homeSliderItems.length - 2].classList.add("activeLeft");
+			}
+
+			homeSliderItems[homeSliderItems.length - 4].classList.remove(
+				"activeRight"
+			);
+			homeSliderItems[homeSliderItems.length - 4].classList.remove(
+				"activeMiddle"
+			);
+			homeSliderItems[homeSliderItems.length - 4].classList.remove(
+				"activeLeft"
+			);
+			homeSliderItems[homeSliderItems.length - 4].classList.remove("activeEnd");
+			homeSliderItems[homeSliderItems.length - 3].classList.add("activeEnd");
+			homeSliderItems[homeSliderItems.length - 2].classList.add("activeLeft");
+			homeSliderItems[homeSliderItems.length - 1].classList.add("activeMiddle");
+			homeSliderItems[i].classList.add("activeRight");
+		} else if (i === 1) {
+			homeSliderItems[homeSliderItems.length - 3].classList.remove(
+				"activeRight"
+			);
+			homeSliderItems[homeSliderItems.length - 3].classList.remove(
+				"activeMiddle"
+			);
+			homeSliderItems[homeSliderItems.length - 3].classList.remove(
+				"activeLeft"
+			);
+			homeSliderItems[homeSliderItems.length - 3].classList.remove("activeEnd");
+			homeSliderItems[homeSliderItems.length - 2].classList.add("activeEnd");
+			homeSliderItems[homeSliderItems.length - 1].classList.add("activeLeft");
+			homeSliderItems[i - 1].classList.add("activeMiddle");
+			homeSliderItems[i].classList.add("activeRight");
+		} else if (i === 2) {
+			homeSliderItems[homeSliderItems.length - 2].classList.remove(
+				"activeRight"
+			);
+			homeSliderItems[homeSliderItems.length - 2].classList.remove(
+				"activeMiddle"
+			);
+			homeSliderItems[homeSliderItems.length - 2].classList.remove(
+				"activeLeft"
+			);
+			homeSliderItems[homeSliderItems.length - 2].classList.remove("activeEnd");
+			homeSliderItems[homeSliderItems.length - 1].classList.add("activeEnd");
+			homeSliderItems[i - 2].classList.add("activeLeft");
+			homeSliderItems[i - 1].classList.add("activeMiddle");
+			homeSliderItems[i].classList.add("activeRight");
+		} else if (i === 3) {
+			homeSliderItems[homeSliderItems.length - 1].classList.remove(
+				"activeRight"
+			);
+			homeSliderItems[homeSliderItems.length - 1].classList.remove(
+				"activeMiddle"
+			);
+			homeSliderItems[homeSliderItems.length - 1].classList.remove(
+				"activeLeft"
+			);
+			homeSliderItems[homeSliderItems.length - 1].classList.remove("activeEnd");
+			homeSliderItems[i - 3].classList.add("activeEnd");
+			homeSliderItems[i - 2].classList.add("activeLeft");
+			homeSliderItems[i - 1].classList.add("activeMiddle");
+			homeSliderItems[i].classList.add("activeRight");
+		} else {
+			homeSliderItems[i - 4].classList.remove("activeRight");
+			homeSliderItems[i - 4].classList.remove("activeMiddle");
+			homeSliderItems[i - 4].classList.remove("activeLeft");
+			homeSliderItems[i - 4].classList.remove("activeEnd");
+			homeSliderItems[i - 3].classList.add("activeEnd");
+			homeSliderItems[i - 2].classList.add("activeLeft");
+			homeSliderItems[i - 1].classList.add("activeMiddle");
+			homeSliderItems[i].classList.add("activeRight");
+		}
 	}
 	i++;
 	if (i === homeSliderItems.length) {
