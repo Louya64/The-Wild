@@ -1,10 +1,10 @@
 @font-face {
-	font-family: "Font1";
-	src: url("fonts/courgette-v8-latin-regular.woff2") format("woff2");
+  font-family: "Font1";
+  src: url("fonts/courgette-v8-latin-regular.woff2") format("woff2");
 }
 @font-face {
-	font-family: "Font2";
-	src: url("fonts/Ephesis-Regular.ttf") format("woff2");
+  font-family: "Font2";
+  src: url("fonts/Ephesis-Regular.ttf") format("woff2");
 }
 
 // $mainColor: #c09628;
@@ -17,6 +17,7 @@ $white: rgb(216, 215, 215);
 $black: rgb(44, 44, 44);
 $darkness: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 
+$mediaQueries450: 450px;
 $mediaQueries800: 800px;
 $mediaQueries1200: 1200px;
 $mediaQueries1600: 1600px;

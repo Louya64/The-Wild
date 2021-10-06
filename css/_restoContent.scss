@@ -15,12 +15,22 @@ img {
   grid-template-rows: 1fr;
   height: 100vh;
 
+  @media screen and (max-width: $mediaQueries800) {
+    grid-template-columns: 1.2fr 0.7fr;
+    grid-template-rows: 0.7fr 0.3fr;
+  }
+
   .header__container--image {
     grid-area: 1/1/2/2;
-    background: url("../assets/resto/food-1828243_1280.jpg");
+    background: url("../assets/resto/header1.jpg");
     background-size: cover;
+    background-position: center;
     -webkit-filter: brightness(0.7);
     filter: brightness(0.7);
+
+    @media screen and (max-width: $mediaQueries800) {
+      grid-area: 1/1;
+    }
   }
 
   .header__container--title {
@@ -29,6 +39,10 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: $mediaQueries800) {
+      grid-area: 1/2;
+    }
 
     h1 {
       color: rgb(143, 118, 7);
@@ -42,23 +56,29 @@ img {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
 
+    @media screen and (max-width: $mediaQueries800) {
+      grid-area: 2/1/2/3;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+    }
+
     div:nth-child(1) {
-      background: url("../assets/resto/india-1481497_1280.jpg");
+      background: url("../assets/resto/header2.jpg");
       background-size: cover;
       background-position: center;
     }
     div:nth-child(2) {
-      background: url("../assets/resto//raspberry-6093284_1280.jpg");
+      background: url("../assets/resto/header3.jpg");
       background-size: cover;
       background-position: center;
     }
     div:nth-child(3) {
-      background: url("../assets/resto/starter-387839_1280.jpg");
+      background: url("../assets/resto/header4.jpg");
       background-size: cover;
       background-position: center;
     }
     div:nth-child(4) {
-      background: url("../assets/resto/bruschetta-4282898_1280.jpg");
+      background: url("../assets/resto/header5.jpg");
       background-size: cover;
       background-position: center;
     }
@@ -70,39 +90,75 @@ img {
 }
 
 .presentation__resto {
-  height: 70vh;
+  height: 35vw;
   text-align: center;
   background: rgba(143, 118, 7, 0.295);
   position: relative;
 
+  @media screen and (max-width: $mediaQueries800) {
+    height: 70vw;
+  }
+  @media screen and (max-width: $mediaQueries450) {
+    height: 85vw;
+  }
+
   .presentation__resto__container {
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: $mediaQueries800) {
+      flex-direction: column;
+    }
   }
 }
 .presentation__resto__container--text {
   background: white;
-  padding: 2em;
-  width: 50%;
-  height: 350px;
-  margin: -3% 0 0 5%;
+  padding: 2.5em;
+  width: 40%;
+  margin: -3% 0 0 12%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
+  @media screen and (max-width: $mediaQueries800) {
+    margin: -3% 5%;
+    width: 90%;
+    padding-bottom: 100px;
+  }
+
   p {
-    width: 70%;
+    width: 90%;
     margin: 2em auto;
+    font-size: $paragraphsFontSize * 0.3;
+    font-family: $fontTitles1;
+
+    @media screen and (max-width: $mediaQueries800) {
+      font-size: $paragraphsFontSize * 0.5;
+    }
+
+    @media screen and (max-width: $mediaQueries450) {
+      font-size: $paragraphsFontSize * 0.7;
+    }
   }
 }
 .presentation__resto__container--image {
   position: absolute;
   top: 27%;
-  right: 5%;
-  width: 45%;
+  right: 12%;
+  width: 40%;
   box-shadow: 20px 20px 0px -2px #ffffff;
   line-height: 0;
   z-index: 1;
+
+  @media screen and (max-width: $mediaQueries800) {
+    width: 70%;
+    right: 15%;
+    top: 45%;
+  }
+  @media screen and (max-width: $mediaQueries450) {
+    width: 70%;
+    top: 60%;
+  }
 
   img {
     width: 100%;
@@ -112,7 +168,7 @@ img {
   position: relative;
 
   .starter__title {
-    background: url("../assets/resto/starter-387839_1280.jpg");
+    background: url("../assets/resto/meals/starter1.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -126,9 +182,13 @@ img {
       left: 50%;
       transform: translate(-50%, -50%);
       color: rgb(143, 118, 7);
-      font-size: 4em;
+      font-size: $paragraphsFontSize * 2;
       font-family: "Font2";
       letter-spacing: 10px;
+
+      @media screen and (max-width: $mediaQueries800) {
+        font-size: $paragraphsFontSize * 3;
+      }
     }
 
     &::before {
@@ -149,65 +209,87 @@ img {
 .startergrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  padding: 4em;
+  grid-auto-rows: 1fr;
+  padding: 7em;
   gap: 0.5em;
 
+  @media screen and (max-width: $mediaQueries800) {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    padding: 2em;
+  }
+
   & > * {
-    padding: 100px 0;
+    padding: 70px 0;
     background: white;
     text-align: center;
+    font-family: $fontTitles1;
+
+    h6 {
+      font-size: $paragraphsFontSize * 0.6;
+      margin-bottom: 10px;
+
+      @media screen and (max-width: $mediaQueries450) {
+        font-size: $paragraphsFontSize * 1;
+      }
+    }
+    p {
+      font-size: $paragraphsFontSize * 0.3;
+      padding: 0 1em;
+
+      @media screen and (max-width: $mediaQueries450) {
+        font-size: $paragraphsFontSize * 0.7;
+      }
+    }
   }
   div:nth-child(1) {
-    background: url("../assets/resto/starter-387839_1280.jpg");
+    background: url("../assets/resto/meals/starter1.jpg");
     background-position: center;
     background-size: cover;
     grid-area: 1/1;
-  }
-  div:nth-child(2) {
-    grid-area: 1/2;
-
-    &:hover {
-      grid-area: 1/1/1/3;
-    }
+    transition-delay: 0.5s;
   }
   div:nth-child(3) {
-    grid-area: 1/3;
-    background: url("../assets/resto/india-1481497_1280.jpg");
+    background: url("../assets/resto/meals/sarter2.jpg");
     background-position: center;
     background-size: cover;
+    transition-delay: 0.5s;
+
+    @media screen and (max-width: $mediaQueries800) {
+      grid-area: 2/ 2;
+    }
   }
   div:nth-child(4) {
-    grid-area: 1/4;
-
-    &:hover {
-      grid-area: 1/3/2/5;
+    @media screen and (max-width: $mediaQueries800) {
+      grid-area: 2/1;
     }
   }
   div:nth-child(5) {
-    grid-area: 2/2;
-    background: url("../assets/resto/pizza-6478478_1280.jpg");
+    background: url("../assets/resto/meals/starter3.jpg");
     background-position: center;
     background-size: cover;
-  }
-  div:nth-child(6) {
-    grid-area: 2/1;
+    grid-area: 2/2;
+    transition-delay: 0.5s;
 
-    &:hover {
-      grid-area: 2/1/3/3;
+    @media screen and(max-width: $mediaQueries800) {
+      grid-area: 3/1;
     }
   }
+
   div:nth-child(7) {
-    grid-area: 2/4;
-    background: url("../assets/resto/mediterranean-cuisine-2378758_1280.jpg");
+    background: url("../assets/resto/meals/starter4.jpg");
     background-position: center;
     background-size: cover;
+    grid-area: 2/4;
+    transition-delay: 0.5s;
+
+    @media screen and (max-width: $mediaQueries800) {
+      grid-area: 4/ 2;
+    }
   }
   div:nth-child(8) {
-    grid-area: 2/3;
-
-    &:hover {
-      grid-area: 2/3/3/5;
+    @media screen and (max-width: $mediaQueries800) {
+      grid-area: 4/ 1;
     }
   }
 }
@@ -223,6 +305,10 @@ img {
     font-size: 4em;
     font-family: "Font2";
     letter-spacing: 10px;
+
+    @media screen and (max-width: $mediaQueries800) {
+      font-size: $paragraphsFontSize * 3;
+    }
   }
 
   .meals__title {
@@ -252,6 +338,12 @@ img {
   justify-content: flex-end;
   position: relative;
   height: 85vh;
+  align-items: center;
+
+  @media screen and(max-width: $mediaQueries800) {
+    flex-direction: column;
+    height: auto;
+  }
 
   &::before {
     content: "";
@@ -270,29 +362,56 @@ img {
   width: 100%;
 
   h2 {
-    font-size: 2.5em;
+    font-size: 3em;
+    letter-spacing: 3px;
+
+    @media screen and (max-width: $mediaQueries800) {
+      z-index: 2;
+      font-size: 4em;
+      width: 80%;
+      top: -85px;
+      left: 75%;
+      background: white;
+      text-align: center;
+    }
   }
 }
 .meals__main--image {
-  width: 45%;
+  background: url("../assets/resto/meals/0.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40%;
   position: absolute;
   top: 20%;
-  left: 8%;
+  left: 10%;
   box-shadow: -20px 20px 0 0 white;
   line-height: 0;
+  padding: 25vh;
+
+  @media screen and(max-width: $mediaQueries800) {
+    z-index: 1;
+    position: initial;
+    width: 90%;
+    margin: -40px 5px 0 25px;
+  }
 }
 .meals__main--text {
   width: 45%;
-  height: 300px;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: -70px 0 0;
+  margin: -50vh 10% 0;
   position: relative;
   background: rgb(143, 118, 7);
-  padding: 2em 0;
-  margin-right: 5em;
+  padding: 2em;
+
+  @media screen and (max-width: $mediaQueries800) {
+    width: 70%;
+    margin: -30px 5% 0;
+  }
 
   h3 {
     margin-bottom: 1em;
@@ -304,10 +423,22 @@ img {
     text-align: center;
   }
 }
+#meatMeal {
+  z-index: 2;
+}
 .meals__main--buttons {
   position: absolute;
   top: 60%;
   right: 8%;
+
+  @media screen and (max-width: $mediaQueries800) {
+    position: initial;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    z-index: 8;
+    margin-top: -20px;
+  }
 
   button {
     padding: 1em;
@@ -318,6 +449,11 @@ img {
     transition: 0.3s ease-in-out;
     letter-spacing: 1px;
     border: 1px solid $mainColor;
+
+    @media screen and (max-width: $mediaQueries800) {
+      border-color: black;
+      z-index: 4;
+    }
 
     &:hover {
       background: black;
@@ -340,6 +476,13 @@ img {
     list-style: none;
     margin: 0.5em 0 0 0;
     letter-spacing: 1px;
+
+    @media screen and (max-width: $mediaQueries800) {
+      font-size: $paragraphsFontSize * 0.7;
+    }
+    @media screen and (max-width: $mediaQueries450) {
+      font-size: $paragraphsFontSize * 0.8;
+    }
 
     &:nth-child(1) {
       grid-area: 1/1/3/3;
@@ -388,17 +531,9 @@ img {
   position: absolute;
   background: none;
   box-shadow: none;
-
-  &li {
-    transition-delay: 1s;
-  }
 }
 #vegeMeal {
   @extend #fishMeal;
-
-  &li {
-    transition-delay: 1s;
-  }
 }
 .meals__wine {
   background: rgba(143, 118, 7, 0.3);
@@ -410,9 +545,17 @@ img {
   align-items: center;
   justify-content: center;
 
+  @media screen and (max-width: $mediaQueries800) {
+    padding-top: 5%;
+  }
+
   p {
     font-size: $paragraphsFontSize * 0.5;
     width: 60%;
+
+    @media screen and (max-width: $mediaQueries450) {
+      font-size: $paragraphsFontSize * 1;
+    }
   }
 
   button {
@@ -431,9 +574,14 @@ img {
 }
 .side__grid {
   display: flex;
-  height: 60vh;
+  height: 300px;
   position: relative;
   overflow: hidden;
+
+  @media screen and (max-width: $mediaQueries800) {
+    flex-direction: column;
+    height: auto;
+  }
 
   div {
     padding: 10%;
@@ -441,7 +589,10 @@ img {
     filter: brightness(0.5);
     transition: 0.5s ease-in-out;
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.5));
+
+    @media screen and (max-width: $mediaQueries800) {
+      padding: 20%;
+    }
 
     & h3 {
       line-height: 4;
@@ -458,6 +609,11 @@ img {
       opacity: 0;
       letter-spacing: 5px;
       white-space: nowrap;
+
+      @media screen and (max-width: $mediaQueries800) {
+        text-align: center;
+        font-size: 2.5em;
+      }
     }
 
     &:hover {
@@ -465,6 +621,10 @@ img {
       filter: none;
       transform: scale(1.1);
       padding: 12%;
+
+      @media screen and (max-width: $mediaQueries800) {
+        padding: 25%;
+      }
     }
 
     &:nth-child(1) {
@@ -505,11 +665,17 @@ img {
   .side__title {
     padding: 2em 0;
     text-align: center;
+
     h3 {
       font-size: $paragraphsFontSize * 0.7;
       font-family: $fontTitles1;
       color: $mainColor;
       letter-spacing: 10px;
+
+      @media screen and (max-width: $mediaQueries450) {
+        font-size: $paragraphsFontSize * 1.2;
+        letter-spacing: 5px;
+      }
     }
   }
   .side__text {
@@ -525,13 +691,22 @@ img {
 
     p {
       width: 50%;
+
+      @media screen and (max-width: $mediaQueries800) {
+        font-size: $paragraphsFontSize * 1;
+      }
+
+      @media screen and (max-width: $mediaQueries450) {
+        font-size: $paragraphsFontSize * 1.3;
+        width: 70%;
+      }
     }
   }
 }
 
 .dessert {
   position: relative;
-  background-image: url("/Projets/The-Wild-restau/assets/resto/meals/backgrid.jpg");
+  background-image: url("../assets/resto/meals/backgrid.jpg");
   background-size: cover;
   background-position-y: bottom;
   background-repeat: no-repeat;
@@ -557,10 +732,15 @@ img {
     font-size: 4em;
     font-family: "Font2";
     letter-spacing: 10px;
+
+    @media screen and (max-width: $mediaQueries800) {
+      font-size: $paragraphsFontSize * 3;
+      line-height: 0.5;
+    }
   }
 
   .dessert__title {
-    background: url("../assets/resto/raspberry-6093284_1280.jpg");
+    background: url("../assets/resto/meals/cake_roule.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -579,13 +759,17 @@ img {
       justify-content: center;
       align-items: center;
 
+      @media screen and (max-width: $mediaQueries800) {
+        width: auto;
+      }
+
       div {
         display: flex;
         flex-direction: column;
 
         span {
           &:first-child {
-            font-size: $paragraphsFontSize * 0.7;
+            font-size: $paragraphsFontSize * 0.9;
             color: white;
           }
         }
@@ -596,6 +780,15 @@ img {
         color: $mainColor;
         font-size: $paragraphsFontSize * 0.5;
         margin-top: 15px;
+
+        @media screen and (max-width: $mediaQueries800) {
+          width: 100px;
+        }
+        @media screen and (max-width: $mediaQueries450) {
+          font-size: $paragraphsFontSize * 1;
+          width: 70px;
+          margin-top: 20px;
+        }
       }
 
       img {
@@ -622,6 +815,7 @@ img {
   justify-content: center;
   align-items: center;
   position: relative;
+  text-align: center;
 
   h3,
   p {
@@ -630,23 +824,45 @@ img {
   }
   h3 {
     font-size: $paragraphsFontSize * 0.7;
+
+    @media screen and(max-width:$mediaQueries800) {
+      font-size: $paragraphsFontSize * 0.9;
+    }
+    @media screen and (max-width: $mediaQueries450) {
+      font-size: $paragraphsFontSize * 1.5;
+      letter-spacing: 5px;
+    }
   }
   p {
     font-size: $paragraphsFontSize * 0.4;
+
+    @media screen and(max-width:$mediaQueries800) {
+      font-size: $paragraphsFontSize * 0.7;
+    }
+    @media screen and (max-width: $mediaQueries450) {
+      font-size: $paragraphsFontSize * 1.2;
+    }
   }
 }
 .dessert__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 200px);
   width: 50%;
   margin: 10vh auto 0;
   padding: 5vh;
   background: rgba(143, 118, 7, 0.5);
   position: relative;
 
+  @media screen and(max-width: $mediaQueries800) {
+    width: 90%;
+  }
+
+  @media screen and (max-width: $mediaQueries450) {
+    padding: 2vh;
+  }
   div > * {
-    padding: 25% 0;
+    padding: 10% 0;
   }
 
   .dessert__grid--image {
@@ -667,11 +883,15 @@ img {
         font-size: 2em;
         color: $mainColor;
         padding: 1em;
+
+        @media screen and(max-width: $mediaQueries800) {
+          font-size: 4em;
+        }
       }
     }
     &:nth-child(1) {
       grid-area: 1/1/2/2;
-      background: url("/Projets/The-Wild-restau/assets/resto/meals/chocolat_trio.jpg");
+      background: url("../assets/resto/meals/chocolat_trio.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -679,7 +899,7 @@ img {
 
     &:nth-child(2) {
       grid-area: 1/2/2/3;
-      background: url("/Projets/The-Wild-restau/assets/resto/meals/tiramisu.jpg");
+      background: url("../assets/resto/meals/tiramisu.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -687,31 +907,49 @@ img {
 
     &:nth-child(3) {
       grid-area: 2/1/3/2;
-      background: url("/Projets/The-Wild-restau/assets/resto/meals/cake_roule.jpg");
+      background: url("../assets/resto/meals/cake_roule.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
     }
     &:nth-child(4) {
       grid-area: 2/2/3/3;
-      background: url("/Projets/The-Wild-restau/assets/resto/meals/cafegourmant.jpg");
+      background: url("../assets/resto/meals/cafegourmant.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
     }
     &:nth-child(5) {
       grid-area: 3/1/4/2;
-      background: url("/Projets/The-Wild-restau/assets/resto/meals/dessertbaie.jpg");
+      background: url("../assets/resto/meals/dessertbaie.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
     }
     &:nth-child(6) {
       grid-area: 3/2/4/3;
-      background: url("/Projets/The-Wild-restau/assets/resto/meals//tartecitron.jpg");
+      background: url("../assets/resto/meals//tartecitron.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
     }
   }
+}
+
+.revealScroll {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: 1s cubic-bezier(0.5, 0, 0, 1);
+}
+.revealRestoLeft {
+  opacity: 0;
+  transform: translate(10%, 10%);
+}
+.revealRestoRight {
+  opacity: 0;
+  transform: translate(-10%, -10%);
+}
+.revealRestoBottom {
+  opacity: 0;
+  transform: translatey(10%);
 }
