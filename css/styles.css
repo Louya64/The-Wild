@@ -3778,7 +3778,7 @@ img {
   color: white;
 }
 
-table {
+.horaire {
   margin-top: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3788,10 +3788,33 @@ table {
           justify-content: center;
 }
 
-table td {
+.horaire td {
   text-align: center;
   padding-right: 5rem;
   padding-bottom: 2rem;
+}
+
+.link h2 {
+  color: #8f7607;
+  padding: 10vh 0 1vh 2vw;
+  background: url("../assets/contact/Liens.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.link__container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 8vh auto;
+}
+
+.link__container .linkFriend {
+  text-shadow: 2px 2px 3px #8f7607;
+}
+
+.link__container .linkFriend:hover {
+  text-decoration: underline;
 }
 
 .section_iframe {
