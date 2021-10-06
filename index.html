@@ -92,20 +92,24 @@
 					</div>
 				</article>
 			</section>
-			<section id="homeIntro">
-				<p>
+
+			<section class="homeIntro">
+				<h2>Bienvenue</h2>
+				<p class="homeIntro__text">
 					Vivez une expérience culinaire mémorable<br />
 					dans un havre de paix situé entre mer et montagnes. <br />Notre
 					restaurant gastronomique vous proposent une cuisine sensorielle,
 					créative, empreinte de liberté, étoilé au guide Michelin.
 				</p>
-				<p>Notre équipe est là pour vous accueillir chaleureusement</p>
-				<button class="btn">
-					<a href="nousconnaitre.html">Nous connaitre</a>
-				</button>
+				<p class="homeIntro__text">
+					Notre équipe est là pour vous accueillir chaleureusement
+				</p>
+				<a class="btn homeIntro__btn" href="nousconnaitre.html"
+					>Nous connaitre</a
+				>
 			</section>
 
-			<!-- la carte restaurant -->
+			<!-- Côté Resto -->
 			<section class="home-restau">
 				<div class="home-restau__bg"></div>
 				<img
@@ -139,13 +143,11 @@
 				</div>
 				<div class="home-restau__text2">
 					<p>Venez découvrir notre carte</p>
-					<button class="btn">
-						<a href="coteresto.html">En savoir plus</a>
-					</button>
+					<a class="btn" href="coteresto.html">En savoir plus</a>
 				</div>
 			</section>
 
-			<!-- la carte bar -->
+			<!-- Côté Bar -->
 			<section class="home-bar">
 				<div class="home-bar__bg"></div>
 				<div class="home-bar__container">
@@ -172,9 +174,7 @@
 						Découvrez nos cocktail et nos grands crus spécialement conservés
 						dans notre super cave
 					</p>
-					<button class="btn">
-						<a href="bar.html">En savoir plus</a>
-					</button>
+					<a class="btn" href="bar.html">En savoir plus</a>
 				</div>
 			</section>
 
@@ -198,7 +198,7 @@
 						/>
 						<div class="homeEvents__slider__item__title">
 							<h3 class="">Lydie en concert</h3>
-							<button class="btn">En savoir plus</button>
+							<span class="btn">En savoir plus</span>
 						</div>
 					</a>
 
@@ -211,7 +211,7 @@
 						/>
 						<div class="homeEvents__slider__item__title">
 							<h3 class="">Eric en concert</h3>
-							<button class="btn">En savoir plus</button>
+							<span class="btn">En savoir plus</span>
 						</div>
 					</a>
 
@@ -224,7 +224,7 @@
 						/>
 						<div class="homeEvents__slider__item__title">
 							<h3 class="">Christelle en concert</h3>
-							<button class="btn">En savoir plus</button>
+							<span class="btn">En savoir plus</span>
 						</div>
 					</a>
 
@@ -237,7 +237,7 @@
 						/>
 						<div class="homeEvents__slider__item__title">
 							<h3 class="">Bastien en concert</h3>
-							<button class="btn">En savoir plus</button>
+							<span class="btn">En savoir plus</span>
 						</div>
 					</a>
 
@@ -250,7 +250,7 @@
 						/>
 						<div class="homeEvents__slider__item__title">
 							<h3 class="">Lydie en concert</h3>
-							<button class="btn">En savoir plus</button>
+							<span class="btn">En savoir plus</span>
 						</div>
 					</a>
 
@@ -263,7 +263,7 @@
 						/>
 						<div class="homeEvents__slider__item__title">
 							<h3 class="">Eric en concert</h3>
-							<button class="btn">En savoir plus</button>
+							<span class="btn">En savoir plus</span>
 						</div>
 					</a>
 
@@ -276,7 +276,7 @@
 						/>
 						<div class="homeEvents__slider__item__title">
 							<h3 class="">Christelle en concert</h3>
-							<button class="btn">En savoir plus</button>
+							<span class="btn">En savoir plus</span>
 						</div>
 					</a>
 
@@ -289,12 +289,13 @@
 						/>
 						<div class="homeEvents__slider__item__title">
 							<h3 class="">Bastien en concert</h3>
-							<button class="btn">En savoir plus</button>
+							<span class="btn">En savoir plus</span>
 						</div>
 					</a>
 				</div>
 			</section>
 		</main>
+
 		<footer class="footer">
 			<img
 				class="footer__img"
@@ -315,7 +316,12 @@
 			<div class="footer__newletter">
 				<form>
 					<label for="email">NewsLetter:</label>
-					<input name="email" type="email" placeholder="Votre Email" />
+					<input
+						name="email"
+						type="email"
+						id="email"
+						placeholder="Votre Email"
+					/>
 					<input class="btn" type="button" value="S'abonner" />
 				</form>
 			</div>

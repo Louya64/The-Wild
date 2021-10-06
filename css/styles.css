@@ -396,7 +396,7 @@ body {
   background-color: rgba(143, 118, 7, 0.3);
 }
 
-#homeIntro {
+.homeIntro {
   margin: 10vh auto;
   text-align: center;
   font-family: sans-serif;
@@ -409,7 +409,7 @@ body {
 }
 
 @media screen and (min-width: 800px) {
-  #homeIntro {
+  .homeIntro {
     margin: 12vh 5vw;
     padding: 3vh 5vw;
     font-size: 2vw;
@@ -417,15 +417,22 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-  #homeIntro {
+  .homeIntro {
     margin: 5vh 15vw 10vh 3vw;
     padding: 3vh 5vw;
     font-size: 1.6vw;
   }
 }
 
-#homeIntro .btn {
-  margin-top: 2vh;
+.homeIntro h2 {
+  margin-bottom: 2vw;
+  color: #8f7607;
+  font-size: 7.2vw;
+  font-family: Font2;
+}
+
+.homeIntro__text {
+  padding-bottom: 1vh;
 }
 
 .home-restau {
@@ -910,6 +917,10 @@ body {
   border-radius: 10px;
 }
 
+.homeEvents__slider__item__title .btn:hover {
+  border: 2px solid #8f7607;
+}
+
 .homeEvents__slider__item__title h3 {
   font-size: 4vw;
   font-family: Font2;
@@ -1130,8 +1141,15 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[7];
       grid-template-columns: repeat(7, 1fr);
-  -ms-grid-rows: (1fr)[8];
-      grid-template-rows: repeat(8, 1fr);
+  -ms-grid-rows: (1fr)[7];
+      grid-template-rows: repeat(7, 1fr);
+}
+
+@media screen and (max-width: 800px) {
+  .nousconnaitre-salle__container {
+    -ms-grid-rows: (1fr)[8];
+        grid-template-rows: repeat(8, 1fr);
+  }
 }
 
 .nousconnaitre-salle__container > article {
