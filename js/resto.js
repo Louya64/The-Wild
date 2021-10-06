@@ -16,6 +16,7 @@ if (mealsMeat) {
 
     for (let j = 0; j < buttonsMeat.length; j++) {
       buttonsMeat[j].addEventListener("click", () => {
+        const transitionTranslate = `${(i + 0.2) / 5}s ease-in`;
         if (j === 1) {
           mealsFish.style.zIndex = 7;
           mealsMeat.style.zIndex = 0;
@@ -26,9 +27,9 @@ if (mealsMeat) {
           mealsMeatList[i].classList.remove("active");
           if (mealsVegeList[i]) {
             mealsVegeList[i].classList.remove("active");
-            mealsVegeList[i].style.transition = `${(i + 0.2) / 5}s ease-in`;
+            mealsVegeList[i].style.transition = transitionTranslate;
           }
-          mealsMeatList[i].style.transition = `${(i + 0.2) / 5}s ease-in`;
+          mealsMeatList[i].style.transition = transitionTranslate;
           mealsFishList[i].style.transition = `1s ease-in-out`;
           document.getElementById(
             "meals__image"
@@ -45,8 +46,8 @@ if (mealsMeat) {
           buttonsMeat[1].classList.remove("active");
           mealsMeatList[i].classList.remove("active");
           mealsFishList[i].classList.remove("active");
-          mealsFishList[i].style.transition = `${(i + 0.2) / 5}s ease-in`;
-          mealsMeatList[i].style.transition = `${(i + 0.2) / 5}s ease-in`;
+          mealsFishList[i].style.transition = transitionTranslate;
+          mealsMeatList[i].style.transition = transitionTranslate;
           if (mealsVegeList[i]) {
             mealsVegeList[i].style.transition = `1s ease-in-out`;
             mealsVegeList[i].classList.add("active");
@@ -68,9 +69,9 @@ if (mealsMeat) {
           mealsFishList[i].classList.remove("active");
           if (mealsVegeList[i]) {
             mealsVegeList[i].classList.remove("active");
-            mealsVegeList[i].style.transition = `${(i + 0.2) / 5}s ease-in`;
+            mealsVegeList[i].style.transition = transitionTranslate;
           }
-          mealsFishList[i].style.transition = `${(i + 0.2) / 5}s ease-in`;
+          mealsFishList[i].style.transition = transitionTranslate;
 
           document.getElementById(
             "meals__image"

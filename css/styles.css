@@ -1284,14 +1284,14 @@ img {
   filter: brightness(0.7);
 }
 
-.presentation {
+.presentation__resto {
   height: 70vh;
   text-align: center;
   background: rgba(143, 118, 7, 0.295);
   position: relative;
 }
 
-.presentation .presentation__container {
+.presentation__resto .presentation__resto__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1300,7 +1300,7 @@ img {
           align-items: center;
 }
 
-.presentation__container--text {
+.presentation__resto__container--text {
   background: white;
   padding: 2em;
   width: 50%;
@@ -1318,12 +1318,12 @@ img {
           justify-content: center;
 }
 
-.presentation__container--text p {
+.presentation__resto__container--text p {
   width: 70%;
   margin: 2em auto;
 }
 
-.presentation__container--image {
+.presentation__resto__container--image {
   position: absolute;
   top: 27%;
   right: 5%;
@@ -1334,7 +1334,7 @@ img {
   z-index: 1;
 }
 
-.presentation__container--image img {
+.presentation__resto__container--image img {
   width: 100%;
 }
 
@@ -1924,6 +1924,9 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .dessert .dessert__title .dessert__title--image div {
@@ -1937,12 +1940,15 @@ img {
 }
 
 .dessert .dessert__title .dessert__title--image div span:first-child {
-  font-size: 1.6vw;
+  font-size: 2.8vw;
+  color: white;
 }
 
 .dessert .dessert__title .dessert__title--image span {
-  width: 100px;
+  width: 200px;
   color: #8f7607;
+  font-size: 2vw;
+  margin-top: 15px;
 }
 
 .dessert .dessert__title .dessert__title--image img {
