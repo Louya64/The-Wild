@@ -158,7 +158,7 @@ nav #nav__logoMobil img {
 
 @media screen and (min-width: 800px) {
   .menu li:first-child {
-    width: auto;
+    width: 100px;
     margin-right: 9em;
   }
 }
@@ -166,7 +166,7 @@ nav #nav__logoMobil img {
 .menu li a {
   text-decoration: none;
   color: white;
-  font-size: 1.3em;
+  font-size: 1.5em;
   position: relative;
   white-space: nowrap;
   letter-spacing: 3px;
@@ -1325,11 +1325,11 @@ img {
 
 .presentation__container--image {
   position: absolute;
-  top: 30%;
+  top: 27%;
   right: 5%;
   width: 45%;
-  -webkit-box-shadow: 12px 11px 0px -2px #ffffff;
-          box-shadow: 12px 11px 0px -2px #ffffff;
+  -webkit-box-shadow: 20px 20px 0px -2px #ffffff;
+          box-shadow: 20px 20px 0px -2px #ffffff;
   line-height: 0;
   z-index: 1;
 }
@@ -1505,7 +1505,7 @@ img {
 }
 
 .meals .meals__title {
-  background: url("../assets/resto/raspberry-6093284_1280.jpg");
+  background: url("../assets/resto/meals/20.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -1524,6 +1524,595 @@ img {
   top: 0;
   left: 0;
   color: white;
+}
+
+.meals__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  height: 85vh;
+}
+
+.meals__main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(143, 118, 7, 0.3);
+}
+
+.meals__main--title {
+  position: absolute;
+  top: 50px;
+  right: 25%;
+  width: 100%;
+}
+
+.meals__main--title h2 {
+  font-size: 2.5em;
+}
+
+.meals__main--image {
+  width: 45%;
+  position: absolute;
+  top: 20%;
+  left: 8%;
+  -webkit-box-shadow: -20px 20px 0 0 white;
+          box-shadow: -20px 20px 0 0 white;
+  line-height: 0;
+}
+
+.meals__main--text {
+  width: 45%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: -70px 0 0;
+  position: relative;
+  background: #8f7607;
+  padding: 2em 0;
+  margin-right: 5em;
+}
+
+.meals__main--text h3 {
+  margin-bottom: 1em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+}
+
+.meals__main--text ul {
+  text-align: center;
+}
+
+.meals__main--buttons {
+  position: absolute;
+  top: 60%;
+  right: 8%;
+}
+
+.meals__main--buttons button {
+  padding: 1em;
+  background: #8f7607;
+  border: none;
+  width: 120px;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  letter-spacing: 1px;
+  border: 1px solid #8f7607;
+}
+
+.meals__main--buttons button:hover {
+  background: black;
+  color: #8f7607;
+  letter-spacing: 2px;
+}
+
+.meals__main--buttons button.active {
+  background: black;
+  color: #8f7607;
+}
+
+.meals__main--text__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr 1fr;
+  overflow: hidden;
+}
+
+.meals__main--text__grid li {
+  list-style: none;
+  margin: 0.5em 0 0 0;
+  letter-spacing: 1px;
+}
+
+.meals__main--text__grid li:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 1/1/3/3;
+  -webkit-transform: translateY(-5vh);
+          transform: translateY(-5vh);
+  opacity: 0;
+}
+
+.meals__main--text__grid li:nth-child(1).active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  z-index: 8;
+}
+
+.meals__main--text__grid li:nth-child(2), .meals__main--text__grid li:nth-child(4), .meals__main--text__grid li:nth-child(6), .meals__main--text__grid li:nth-child(8), .meals__main--text__grid li:nth-child(10) {
+  text-align: start;
+  -webkit-transform: translateX(-50vh);
+          transform: translateX(-50vh);
+  opacity: 0;
+  cursor: pointer;
+}
+
+.meals__main--text__grid li:nth-child(2).active, .meals__main--text__grid li:nth-child(4).active, .meals__main--text__grid li:nth-child(6).active, .meals__main--text__grid li:nth-child(8).active, .meals__main--text__grid li:nth-child(10).active {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  opacity: 1;
+}
+
+.meals__main--text__grid li:nth-child(3), .meals__main--text__grid li:nth-child(5), .meals__main--text__grid li:nth-child(7), .meals__main--text__grid li:nth-child(9), .meals__main--text__grid li:nth-child(11) {
+  text-align: end;
+  -webkit-transform: translateX(50vh);
+          transform: translateX(50vh);
+  opacity: 0;
+}
+
+.meals__main--text__grid li:nth-child(3).active, .meals__main--text__grid li:nth-child(5).active, .meals__main--text__grid li:nth-child(7).active, .meals__main--text__grid li:nth-child(9).active, .meals__main--text__grid li:nth-child(11).active {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  opacity: 1;
+}
+
+#fishMeal, #vegeMeal {
+  position: absolute;
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#fishMealli {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+#vegeMealli {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.meals__wine {
+  background: rgba(143, 118, 7, 0.3);
+  text-align: center;
+  font-family: Font1;
+  padding-bottom: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.meals__wine p {
+  font-size: 2vw;
+  width: 60%;
+}
+
+.meals__wine button {
+  padding: 1em 2em;
+  background: #8f7607;
+  border: 1px solid #8f7607;
+  cursor: pointer;
+  margin-top: 1em;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.meals__wine button:hover {
+  background: black;
+  color: #8f7607;
+}
+
+.side__grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.side__grid div {
+  padding: 10%;
+  -webkit-filter: brightness(0.5);
+  filter: brightness(0.5);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)));
+  background: linear-gradient(rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.5));
+}
+
+.side__grid div h3 {
+  line-height: 4;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  width: 100%;
+  height: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: white;
+  padding: 0 3em;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  background: #8f7607;
+  opacity: 0;
+  letter-spacing: 5px;
+  white-space: nowrap;
+}
+
+.side__grid div:hover {
+  -webkit-filter: none;
+  filter: none;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  padding: 12%;
+}
+
+.side__grid div:nth-child(1) {
+  background: url("../assets/resto/meals/aubergine.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.side__grid div:nth-child(2) {
+  background: url("../assets/resto/meals/chips.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.side__grid div:nth-child(3) {
+  background: url("../assets/resto/meals/haricots_verts.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.side__grid div:nth-child(4) {
+  background: url("../assets/resto/meals/pasta.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.side__grid div:nth-child(5) {
+  background: url("../assets/resto/meals/rice.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.side {
+  background: black;
+}
+
+.side .side__title {
+  padding: 2em 0;
+  text-align: center;
+}
+
+.side .side__title h3 {
+  font-size: 2.8vw;
+  font-family: Font1;
+  color: #8f7607;
+  letter-spacing: 10px;
+}
+
+.side .side__text {
+  color: white;
+  font-size: 1.6vw;
+  padding: 4em;
+  text-align: center;
+  color: white;
+  font-family: Font1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.side .side__text p {
+  width: 50%;
+}
+
+.dessert {
+  position: relative;
+  background-image: url("/Projets/The-Wild-restau/assets/resto/meals/backgrid.jpg");
+  background-size: cover;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  padding: 0 0 10vh;
+  font-family: Font1;
+}
+
+.dessert::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+
+.dessert h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #8f7607;
+  font-size: 4em;
+  font-family: "Font2";
+  letter-spacing: 10px;
+}
+
+.dessert .dessert__title {
+  background: url("../assets/resto/raspberry-6093284_1280.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 30vh 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.dessert .dessert__title .dessert__title--image {
+  width: 300px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dessert .dessert__title .dessert__title--image div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dessert .dessert__title .dessert__title--image div span:first-child {
+  font-size: 1.6vw;
+}
+
+.dessert .dessert__title .dessert__title--image span {
+  width: 100px;
+  color: #8f7607;
+}
+
+.dessert .dessert__title .dessert__title--image img {
+  width: 100%;
+}
+
+.dessert .dessert__title::before {
+  content: "";
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+}
+
+.dessert__grid--title {
+  margin-top: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.dessert__grid--title h3,
+.dessert__grid--title p {
+  padding: 10px 0;
+  letter-spacing: 6px;
+}
+
+.dessert__grid--title h3 {
+  font-size: 2.8vw;
+}
+
+.dessert__grid--title p {
+  font-size: 1.6vw;
+}
+
+.dessert__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  width: 50%;
+  margin: 10vh auto 0;
+  padding: 5vh;
+  background: rgba(143, 118, 7, 0.5);
+  position: relative;
+}
+
+.dessert__grid div > * {
+  padding: 25% 0;
+}
+
+.dessert__grid .dessert__grid--image {
+  position: relative;
+}
+
+.dessert__grid .dessert__grid--image .dessert__grid--text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+  height: 100%;
+  text-align: center;
+}
+
+.dessert__grid .dessert__grid--image .dessert__grid--text p {
+  font-size: 2em;
+  color: #8f7607;
+  padding: 1em;
+}
+
+.dessert__grid .dessert__grid--image:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1/1/2/2;
+  background: url("/Projets/The-Wild-restau/assets/resto/meals/chocolat_trio.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dessert__grid .dessert__grid--image:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1/2/2/3;
+  background: url("/Projets/The-Wild-restau/assets/resto/meals/tiramisu.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dessert__grid .dessert__grid--image:nth-child(3) {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 2/1/3/2;
+  background: url("/Projets/The-Wild-restau/assets/resto/meals/cake_roule.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dessert__grid .dessert__grid--image:nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 2/2/3/3;
+  background: url("/Projets/The-Wild-restau/assets/resto/meals/cafegourmant.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dessert__grid .dessert__grid--image:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 3/1/4/2;
+  background: url("/Projets/The-Wild-restau/assets/resto/meals/dessertbaie.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dessert__grid .dessert__grid--image:nth-child(6) {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 3/2/4/3;
+  background: url("/Projets/The-Wild-restau/assets/resto/meals//tartecitron.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .first-section {

@@ -1,263 +1,713 @@
-// * {
-// 	margin: 0;
-// 	padding: 0;
-// 	box-sizing: border-box;
-// }
-// @font-face {
-// 	font-family: "Font1";
-// 	src: url("../fonts/courgette-v8-latin-regular.woff2") format("woff2");
-// }
-// @font-face {
-// 	font-family: "Font2";
-// 	src: url("../fonts/Ephesis-Regular.ttf") format("woff2");
-// }
-// body {
-// 	height: 100vh;
-// }
 .restoMainContent {
-	font-size: $paragraphsFontSize * 0.3;
+  font-size: $paragraphsFontSize * 0.3;
 }
+
 img {
-	width: 100%;
-	height: auto;
+  width: 100%;
+  height: auto;
 }
 .header {
-	height: 100vh;
+  height: 100vh;
 }
 .header__container {
-	display: grid;
-	grid-template-columns: 1.2fr 0.7fr 0.3fr;
-	grid-template-rows: 1fr;
-	height: 100vh;
+  display: grid;
+  grid-template-columns: 1.2fr 0.7fr 0.3fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
 
-	.header__container--image {
-		grid-area: 1/1/2/2;
-		background: url("../assets/resto/food-1828243_1280.jpg");
-		background-size: cover;
-		-webkit-filter: brightness(0.7);
-		filter: brightness(0.7);
-	}
+  .header__container--image {
+    grid-area: 1/1/2/2;
+    background: url("../assets/resto/food-1828243_1280.jpg");
+    background-size: cover;
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+  }
 
-	.header__container--title {
-		background: black;
-		grid-area: 1/2/2/3;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+  .header__container--title {
+    background: black;
+    grid-area: 1/2/2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-		h1 {
-			color: rgb(143, 118, 7);
-			font-size: 3em;
-			font-family: "Font1";
-		}
-	}
-	.header__container--grid-image {
-		grid-area: 1/3/2/4;
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: repeat(4, 1fr);
+    h1 {
+      color: rgb(143, 118, 7);
+      font-size: 3em;
+      font-family: "Font1";
+    }
+  }
+  .header__container--grid-image {
+    grid-area: 1/3/2/4;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
 
-		div:nth-child(1) {
-			background: url("../assets/resto/india-1481497_1280.jpg");
-			background-size: cover;
-			background-position: center;
-		}
-		div:nth-child(2) {
-			background: url("../assets/resto//raspberry-6093284_1280.jpg");
-			background-size: cover;
-			background-position: center;
-		}
-		div:nth-child(3) {
-			background: url("../assets/resto/starter-387839_1280.jpg");
-			background-size: cover;
-			background-position: center;
-		}
-		div:nth-child(4) {
-			background: url("../assets/resto/bruschetta-4282898_1280.jpg");
-			background-size: cover;
-			background-position: center;
-		}
-		div {
-			-webkit-filter: brightness(0.7);
-			filter: brightness(0.7);
-		}
-	}
+    div:nth-child(1) {
+      background: url("../assets/resto/india-1481497_1280.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    div:nth-child(2) {
+      background: url("../assets/resto//raspberry-6093284_1280.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    div:nth-child(3) {
+      background: url("../assets/resto/starter-387839_1280.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    div:nth-child(4) {
+      background: url("../assets/resto/bruschetta-4282898_1280.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    div {
+      -webkit-filter: brightness(0.7);
+      filter: brightness(0.7);
+    }
+  }
 }
 
 .presentation {
-	height: 70vh;
-	text-align: center;
-	background: rgba(143, 118, 7, 0.295);
-	position: relative;
+  height: 70vh;
+  text-align: center;
+  background: rgba(143, 118, 7, 0.295);
+  position: relative;
 
-	.presentation__container {
-		display: flex;
-		align-items: center;
-	}
+  .presentation__container {
+    display: flex;
+    align-items: center;
+  }
 }
 .presentation__container--text {
-	background: white;
-	padding: 2em;
-	width: 50%;
-	height: 350px;
-	margin: -3% 0 0 5%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+  background: white;
+  padding: 2em;
+  width: 50%;
+  height: 350px;
+  margin: -3% 0 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-	p {
-		width: 70%;
-		margin: 2em auto;
-	}
+  p {
+    width: 70%;
+    margin: 2em auto;
+  }
 }
 .presentation__container--image {
-	position: absolute;
-	top: 30%;
-	right: 5%;
-	width: 45%;
-	box-shadow: 12px 11px 0px -2px #ffffff;
-	line-height: 0;
-	z-index: 1;
+  position: absolute;
+  top: 27%;
+  right: 5%;
+  width: 45%;
+  box-shadow: 20px 20px 0px -2px #ffffff;
+  line-height: 0;
+  z-index: 1;
 
-	img {
-		width: 100%;
-	}
+  img {
+    width: 100%;
+  }
 }
 .starter {
-	position: relative;
+  position: relative;
 
-	.starter__title {
-		background: url("../assets/resto/starter-387839_1280.jpg");
-		background-size: cover;
-		background-attachment: fixed;
-		background-position: center;
-		padding: 30vh 0;
-		text-align: center;
-		position: relative;
+  .starter__title {
+    background: url("../assets/resto/starter-387839_1280.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 30vh 0;
+    text-align: center;
+    position: relative;
 
-		h2 {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			color: rgb(143, 118, 7);
-			font-size: 4em;
-			font-family: "Font2";
-			letter-spacing: 10px;
-		}
+    h2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgb(143, 118, 7);
+      font-size: 4em;
+      font-family: "Font2";
+      letter-spacing: 10px;
+    }
 
-		&::before {
-			content: "";
-			background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-			color: white;
-		}
-	}
+    &::before {
+      content: "";
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: white;
+    }
+  }
 }
 .gridstarter {
-	background: rgba(143, 118, 7, 0.295);
+  background: rgba(143, 118, 7, 0.295);
 }
 .startergrid {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(2, 1fr);
-	padding: 4em;
-	gap: 0.5em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 4em;
+  gap: 0.5em;
 
-	& > * {
-		padding: 100px 0;
-		background: white;
-		text-align: center;
-	}
-	div:nth-child(1) {
-		background: url("../assets/resto/starter-387839_1280.jpg");
-		background-position: center;
-		background-size: cover;
-		grid-area: 1/1;
-	}
-	div:nth-child(2) {
-		grid-area: 1/2;
+  & > * {
+    padding: 100px 0;
+    background: white;
+    text-align: center;
+  }
+  div:nth-child(1) {
+    background: url("../assets/resto/starter-387839_1280.jpg");
+    background-position: center;
+    background-size: cover;
+    grid-area: 1/1;
+  }
+  div:nth-child(2) {
+    grid-area: 1/2;
 
-		&:hover {
-			grid-area: 1/1/1/3;
-		}
-	}
-	div:nth-child(3) {
-		grid-area: 1/3;
-		background: url("../assets/resto/india-1481497_1280.jpg");
-		background-position: center;
-		background-size: cover;
-	}
-	div:nth-child(4) {
-		grid-area: 1/4;
+    &:hover {
+      grid-area: 1/1/1/3;
+    }
+  }
+  div:nth-child(3) {
+    grid-area: 1/3;
+    background: url("../assets/resto/india-1481497_1280.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  div:nth-child(4) {
+    grid-area: 1/4;
 
-		&:hover {
-			grid-area: 1/3/2/5;
-		}
-	}
-	div:nth-child(5) {
-		grid-area: 2/2;
-		background: url("../assets/resto/pizza-6478478_1280.jpg");
-		background-position: center;
-		background-size: cover;
-	}
-	div:nth-child(6) {
-		grid-area: 2/1;
+    &:hover {
+      grid-area: 1/3/2/5;
+    }
+  }
+  div:nth-child(5) {
+    grid-area: 2/2;
+    background: url("../assets/resto/pizza-6478478_1280.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  div:nth-child(6) {
+    grid-area: 2/1;
 
-		&:hover {
-			grid-area: 2/1/3/3;
-		}
-	}
-	div:nth-child(7) {
-		grid-area: 2/4;
-		background: url("../assets/resto/mediterranean-cuisine-2378758_1280.jpg");
-		background-position: center;
-		background-size: cover;
-	}
-	div:nth-child(8) {
-		grid-area: 2/3;
+    &:hover {
+      grid-area: 2/1/3/3;
+    }
+  }
+  div:nth-child(7) {
+    grid-area: 2/4;
+    background: url("../assets/resto/mediterranean-cuisine-2378758_1280.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  div:nth-child(8) {
+    grid-area: 2/3;
 
-		&:hover {
-			grid-area: 2/3/3/5;
-		}
-	}
+    &:hover {
+      grid-area: 2/3/3/5;
+    }
+  }
 }
 .meals {
-	position: relative;
+  position: relative;
 
-	h2 {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		color: rgb(143, 118, 7);
-		font-size: 4em;
-		font-family: "Font2";
-		letter-spacing: 10px;
-	}
+  h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(143, 118, 7);
+    font-size: 4em;
+    font-family: "Font2";
+    letter-spacing: 10px;
+  }
 
-	.meals__title {
-		background: url("../assets/resto/raspberry-6093284_1280.jpg");
-		background-size: cover;
-		background-attachment: fixed;
-		background-position: center;
-		padding: 30vh 0;
-		text-align: center;
-		position: relative;
+  .meals__title {
+    background: url("../assets/resto/meals/20.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 30vh 0;
+    text-align: center;
+    position: relative;
 
-		&::before {
-			content: "";
-			background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-			color: white;
-		}
-	}
+    &::before {
+      content: "";
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: white;
+    }
+  }
+}
+
+.meals__main {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  height: 85vh;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(143, 118, 7, 0.3);
+  }
+}
+.meals__main--title {
+  position: absolute;
+  top: 50px;
+  right: 25%;
+  width: 100%;
+
+  h2 {
+    font-size: 2.5em;
+  }
+}
+.meals__main--image {
+  width: 45%;
+  position: absolute;
+  top: 20%;
+  left: 8%;
+  box-shadow: -20px 20px 0 0 white;
+  line-height: 0;
+}
+.meals__main--text {
+  width: 45%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: -70px 0 0;
+  position: relative;
+  background: rgb(143, 118, 7);
+  padding: 2em 0;
+  margin-right: 5em;
+
+  h3 {
+    margin-bottom: 1em;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+  }
+  ul {
+    text-align: center;
+  }
+}
+.meals__main--buttons {
+  position: absolute;
+  top: 60%;
+  right: 8%;
+
+  button {
+    padding: 1em;
+    background: $mainColor;
+    border: none;
+    width: 120px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    letter-spacing: 1px;
+    border: 1px solid $mainColor;
+
+    &:hover {
+      background: black;
+      color: $mainColor;
+      letter-spacing: 2px;
+    }
+    &.active {
+      background: black;
+      color: $mainColor;
+    }
+  }
+}
+.meals__main--text__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr 1fr;
+  overflow: hidden;
+
+  li {
+    list-style: none;
+    margin: 0.5em 0 0 0;
+    letter-spacing: 1px;
+
+    &:nth-child(1) {
+      grid-area: 1/1/3/3;
+      transform: translateY(-5vh);
+      opacity: 0;
+
+      &.active {
+        transform: translateY(0);
+        opacity: 1;
+        z-index: 8;
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(4),
+    &:nth-child(6),
+    &:nth-child(8),
+    &:nth-child(10) {
+      text-align: start;
+      transform: translateX(-50vh);
+      opacity: 0;
+      cursor: pointer;
+
+      &.active {
+        transform: translate(0);
+        opacity: 1;
+      }
+    }
+    &:nth-child(3),
+    &:nth-child(5),
+    &:nth-child(7),
+    &:nth-child(9),
+    &:nth-child(11) {
+      text-align: end;
+      transform: translateX(50vh);
+      opacity: 0;
+
+      &.active {
+        transform: translate(0);
+        opacity: 1;
+      }
+    }
+  }
+}
+#fishMeal {
+  position: absolute;
+  background: none;
+  box-shadow: none;
+
+  &li {
+    transition-delay: 1s;
+  }
+}
+#vegeMeal {
+  @extend #fishMeal;
+
+  &li {
+    transition-delay: 1s;
+  }
+}
+.meals__wine {
+  background: rgba(143, 118, 7, 0.3);
+  text-align: center;
+  font-family: $fontTitles1;
+  padding-bottom: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-size: $paragraphsFontSize * 0.5;
+    width: 60%;
+  }
+
+  button {
+    padding: 1em 2em;
+    background: $mainColor;
+    border: 1px solid $mainColor;
+    cursor: pointer;
+    margin-top: 1em;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+      background: black;
+      color: $mainColor;
+    }
+  }
+}
+.side__grid {
+  display: flex;
+  height: 60vh;
+  position: relative;
+  overflow: hidden;
+
+  div {
+    padding: 10%;
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+    transition: 0.5s ease-in-out;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.5));
+
+    & h3 {
+      line-height: 4;
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      width: 100%;
+      height: 0;
+      transform: translateX(-50%);
+      color: white;
+      padding: 0 3em;
+      transition: 0.5s ease-in-out;
+      background: $mainColor;
+      opacity: 0;
+      letter-spacing: 5px;
+      white-space: nowrap;
+    }
+
+    &:hover {
+      -webkit-filter: none;
+      filter: none;
+      transform: scale(1.1);
+      padding: 12%;
+    }
+
+    &:nth-child(1) {
+      background: url("../assets/resto/meals/aubergine.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &:nth-child(2) {
+      background: url("../assets/resto/meals/chips.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &:nth-child(3) {
+      background: url("../assets/resto/meals/haricots_verts.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &:nth-child(4) {
+      background: url("../assets/resto/meals/pasta.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &:nth-child(5) {
+      background: url("../assets/resto/meals/rice.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+.side {
+  background: black;
+
+  .side__title {
+    padding: 2em 0;
+    text-align: center;
+    h3 {
+      font-size: $paragraphsFontSize * 0.7;
+      font-family: $fontTitles1;
+      color: $mainColor;
+      letter-spacing: 10px;
+    }
+  }
+  .side__text {
+    color: white;
+    font-size: $paragraphsFontSize * 0.4;
+    padding: 4em;
+    text-align: center;
+    color: white;
+    font-family: $fontTitles1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      width: 50%;
+    }
+  }
+}
+
+.dessert {
+  position: relative;
+  background-image: url("/Projets/The-Wild-restau/assets/resto/meals/backgrid.jpg");
+  background-size: cover;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  padding: 0 0 10vh;
+  font-family: $fontTitles1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+  }
+
+  h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(143, 118, 7);
+    font-size: 4em;
+    font-family: "Font2";
+    letter-spacing: 10px;
+  }
+
+  .dessert__title {
+    background: url("../assets/resto/raspberry-6093284_1280.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 30vh 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    .dessert__title--image {
+      width: 300px;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+
+      div {
+        display: flex;
+        flex-direction: column;
+
+        span {
+          &:first-child {
+            font-size: $paragraphsFontSize * 0.4;
+          }
+        }
+      }
+
+      span {
+        width: 100px;
+        color: $mainColor;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &::before {
+      content: "";
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: white;
+    }
+  }
+}
+.dessert__grid--title {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  h3,
+  p {
+    padding: 10px 0;
+    letter-spacing: 6px;
+  }
+  h3 {
+    font-size: $paragraphsFontSize * 0.7;
+  }
+  p {
+    font-size: $paragraphsFontSize * 0.4;
+  }
+}
+.dessert__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 50%;
+  margin: 10vh auto 0;
+  padding: 5vh;
+  background: rgba(143, 118, 7, 0.5);
+  position: relative;
+
+  div > * {
+    padding: 25% 0;
+  }
+
+  .dessert__grid--image {
+    position: relative;
+
+    .dessert__grid--text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      transition: 0.3s ease-in;
+      height: 100%;
+      text-align: center;
+
+      p {
+        font-size: 2em;
+        color: $mainColor;
+        padding: 1em;
+      }
+    }
+    &:nth-child(1) {
+      grid-area: 1/1/2/2;
+      background: url("/Projets/The-Wild-restau/assets/resto/meals/chocolat_trio.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &:nth-child(2) {
+      grid-area: 1/2/2/3;
+      background: url("/Projets/The-Wild-restau/assets/resto/meals/tiramisu.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &:nth-child(3) {
+      grid-area: 2/1/3/2;
+      background: url("/Projets/The-Wild-restau/assets/resto/meals/cake_roule.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &:nth-child(4) {
+      grid-area: 2/2/3/3;
+      background: url("/Projets/The-Wild-restau/assets/resto/meals/cafegourmant.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &:nth-child(5) {
+      grid-area: 3/1/4/2;
+      background: url("/Projets/The-Wild-restau/assets/resto/meals/dessertbaie.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &:nth-child(6) {
+      grid-area: 3/2/4/3;
+      background: url("/Projets/The-Wild-restau/assets/resto/meals//tartecitron.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
 }
