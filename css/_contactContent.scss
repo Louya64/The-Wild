@@ -3,12 +3,13 @@
   height: 25vh;
   background-image: url("../assets/contact/contact2.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; 
+  position: relative; 
 
   h1 {
     padding-left: 1rem;
     position: absolute;
-    top: 20%;
+    bottom: 5%;
     color: white;
   }
 }
@@ -109,6 +110,7 @@ table {
     background-image: url("../assets/contact/contact2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 
     h1 {
       padding-left: 1rem;
