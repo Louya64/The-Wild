@@ -420,7 +420,12 @@ body {
   #homeIntro {
     margin: 5vh 15vw 10vh 3vw;
     padding: 3vh 5vw;
+    font-size: 1.6vw;
   }
+}
+
+#homeIntro .btn {
+  margin-top: 2vh;
 }
 
 .home-restau {
@@ -775,10 +780,34 @@ body {
   top: 0;
   right: -100vw;
   z-index: 1;
-  border: 3px solid #8f7607;
+  border: 3px solid #2e2602;
   border-radius: 10px;
-  -webkit-box-shadow: 2px 2px 15px #8f7607;
-          box-shadow: 2px 2px 15px #8f7607;
+  -webkit-box-shadow: 1px 1px 5px #8f7607;
+          box-shadow: 1px 1px 5px #8f7607;
+}
+
+@media screen and (max-width: 800px) {
+  .homeEvents__slider__item:hover .homeEvents__slider__item__img:not(#makingHeight) {
+    width: 51vw;
+    -webkit-box-shadow: 2px 2px 25px #8f7607;
+            box-shadow: 2px 2px 25px #8f7607;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .homeEvents__slider__item:hover .homeEvents__slider__item__img:not(#makingHeight) {
+    width: 31vw;
+    -webkit-box-shadow: 2px 2px 25px #8f7607;
+            box-shadow: 2px 2px 25px #8f7607;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .homeEvents__slider__item:hover .homeEvents__slider__item__img:not(#makingHeight) {
+    width: 21vw;
+    -webkit-box-shadow: 2px 2px 25px #8f7607;
+            box-shadow: 2px 2px 25px #8f7607;
+  }
 }
 
 .homeEvents__slider__item.active {
@@ -844,6 +873,10 @@ body {
   }
 }
 
+.homeEvents__slider__item:hover {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 800px) {
   .homeEvents__slider__item__img {
     width: 50vw;
@@ -866,10 +899,9 @@ body {
 
 .homeEvents__slider__item__title {
   position: absolute;
-  bottom: 5vw;
+  bottom: 2vw;
   left: 1vw;
   right: 1vw;
-  left: 1vw;
   text-align: center;
   color: #d8d7d7;
   border: 2px inset #8f7607;
@@ -882,7 +914,7 @@ body {
   font-size: 4vw;
   font-family: Font2;
   color: #8f7607;
-  padding-bottom: 2vh;
+  padding-bottom: 1vh;
 }
 
 @media screen and (min-width: 800px) {
@@ -903,9 +935,49 @@ body {
   margin-bottom: 10vh;
 }
 
+#lydie1 {
+  background: url("../assets/home/newsSlider/homeSliderBg3.jpg");
+  background-size: cover;
+}
+
+#eric1 {
+  background: url("../assets/home/newsSlider/homeSliderBg1.jpg");
+  background-size: cover;
+}
+
+#christelle1 {
+  background: url("../assets/home/newsSlider/homeSliderBg6.jpg");
+  background-size: cover;
+}
+
+#bastien1 {
+  background: url("../assets/home/newsSlider/homeSliderBg7.jpg");
+  background-size: cover;
+}
+
+#lydie2 {
+  background: url("../assets/home/newsSlider/homeSliderBg8.jpg");
+  background-size: cover;
+}
+
+#eric2 {
+  background: url("../assets/home/newsSlider/homeSliderBg6.jpg");
+  background-size: cover;
+}
+
+#christelle2 {
+  background: url("../assets/home/newsSlider/homeSliderBg5.jpg");
+  background-size: cover;
+}
+
+#bastien2 {
+  background: url("../assets/home/newsSlider/homeSliderBg4.jpg");
+  background-size: cover;
+}
+
 .nousconnaitre-hero {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../assets/nousconnaitre/nousConnaitre-hero.jpg);
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/nousconnaitre/nousConnaitre-hero.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../assets/nousconnaitre/nousconnaitre-hero.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/nousconnaitre/nousconnaitre-hero.jpg);
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -980,6 +1052,13 @@ body {
   font-family: Font2;
 }
 
+@media screen and (max-width: 800px) {
+  .nousconnaitre-cuisine__chef h3 {
+    font-size: 8vw;
+    padding-top: 10vh;
+  }
+}
+
 .nousconnaitre-cuisine__chef p {
   padding: 5vh 5vw;
 }
@@ -1019,6 +1098,7 @@ body {
 @media screen and (max-width: 800px) {
   .nousconnaitre-cuisine__poubelle h3 {
     padding-top: 10vh;
+    font-size: 8vw;
   }
 }
 
@@ -1050,8 +1130,8 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[7];
       grid-template-columns: repeat(7, 1fr);
-  -ms-grid-rows: (1fr)[9];
-      grid-template-rows: repeat(9, 1fr);
+  -ms-grid-rows: (1fr)[8];
+      grid-template-rows: repeat(8, 1fr);
 }
 
 .nousconnaitre-salle__container > article {
@@ -1072,8 +1152,8 @@ body {
 }
 
 .nousconnaitre-salle__container--salle {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/nousconnaitre/nousConnaitre-person3.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/nousconnaitre/nousConnaitre-person3.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/nousconnaitre/nousconnaitre-person3.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/nousconnaitre/nousconnaitre-person3.jpg");
   background-size: cover;
   -ms-grid-column: 2;
   -ms-grid-column-span: 3;
@@ -1092,8 +1172,8 @@ body {
 }
 
 .nousconnaitre-salle__container--bar {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/nousconnaitre/nousConnaitre-person4.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/nousconnaitre/nousConnaitre-person4.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/nousconnaitre/nousconnaitre-person4.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/nousconnaitre/nousconnaitre-person4.jpg");
   background-size: cover;
   -ms-grid-column: 5;
   -ms-grid-column-span: 2;
@@ -1146,9 +1226,9 @@ body {
   -ms-grid-column: 2;
   -ms-grid-column-span: 5;
   grid-column: 2 / 7;
-  -ms-grid-row: 7;
+  -ms-grid-row: 6;
   -ms-grid-row-span: 2;
-  grid-row: 7 / 9;
+  grid-row: 6 / 8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1170,11 +1250,8 @@ body {
     -ms-grid-column-span: 7;
     grid-column: 1 / 8;
     -ms-grid-row: 6;
-    -ms-grid-row-span: 4;
-    grid-row: 6 / 10;
-  }
-  .nousconnaitre-salle__container--text .display-large {
-    display: none;
+    -ms-grid-row-span: 3;
+    grid-row: 6 / 9;
   }
 }
 
