@@ -1,0 +1,977 @@
+.restoMainContent {
+  font-size: $paragraphsFontSize * 0.3;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+.header {
+  height: 100vh;
+}
+.header__container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.7fr 0.3fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
+
+  @media screen and (max-width: $mediaQueries800) {
+    grid-template-columns: 1.2fr 0.7fr;
+    grid-template-rows: 0.7fr 0.3fr;
+  }
+
+  .header__container--image {
+    grid-area: 1/1/2/2;
+    background: url("../assets/resto/header1.jpg");
+    background-size: cover;
+    background-position: center;
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+
+    @media screen and (max-width: $mediaQueries800) {
+      grid-area: 1/1;
+    }
+  }
+
+  .header__container--title {
+    background: black;
+    grid-area: 1/2/2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: $mediaQueries800) {
+      grid-area: 1/2;
+    }
+
+    h1 {
+      color: rgb(143, 118, 7);
+      font-size: 3em;
+      font-family: "Font1";
+    }
+  }
+  .header__container--grid-image {
+    grid-area: 1/3/2/4;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+
+    @media screen and (max-width: $mediaQueries800) {
+      grid-area: 2/1/2/3;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+    }
+
+    div:nth-child(1) {
+      background: url("../assets/resto/header2.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    div:nth-child(2) {
+      background: url("../assets/resto/header3.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    div:nth-child(3) {
+      background: url("../assets/resto/header4.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    div:nth-child(4) {
+      background: url("../assets/resto/header5.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    div {
+      -webkit-filter: brightness(0.7);
+      filter: brightness(0.7);
+    }
+  }
+}
+
+.presentation__resto {
+  height: 35vw;
+  text-align: center;
+  background: rgba(143, 118, 7, 0.295);
+  position: relative;
+
+  @media screen and (max-width: $mediaQueries800) {
+    height: 70vw;
+  }
+  @media screen and (max-width: $mediaQueries450) {
+    height: 85vw;
+  }
+
+  .presentation__resto__container {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: $mediaQueries800) {
+      flex-direction: column;
+    }
+  }
+}
+.presentation__resto__container--text {
+  background: white;
+  padding: 2.5em;
+  width: 40%;
+  margin: -3% 0 0 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media screen and (max-width: $mediaQueries800) {
+    margin: -3% 5%;
+    width: 90%;
+    padding-bottom: 100px;
+  }
+
+  p {
+    width: 90%;
+    margin: 2em auto;
+    font-size: $paragraphsFontSize * 0.3;
+    font-family: $fontTitles1;
+
+    @media screen and (max-width: $mediaQueries800) {
+      font-size: $paragraphsFontSize * 0.5;
+    }
+
+    @media screen and (max-width: $mediaQueries450) {
+      font-size: $paragraphsFontSize * 0.7;
+    }
+  }
+}
+.presentation__resto__container--image {
+  position: absolute;
+  top: 27%;
+  right: 12%;
+  width: 40%;
+  box-shadow: 20px 20px 0px -2px #ffffff;
+  line-height: 0;
+  z-index: 1;
+
+  @media screen and (max-width: $mediaQueries800) {
+    width: 70%;
+    right: 15%;
+    top: 45%;
+  }
+  @media screen and (max-width: $mediaQueries450) {
+    width: 70%;
+    top: 65%;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+.starter {
+  position: relative;
+
+  .starter__title {
+    background: url("../assets/resto/meals/starter1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 30vh 0;
+    text-align: center;
+    position: relative;
+
+    @media screen and (max-width: $mediaQueries450) {
+      background-attachment: initial;
+    }
+
+    h2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgb(143, 118, 7);
+      font-size: $paragraphsFontSize * 2;
+      font-family: "Font2";
+      letter-spacing: 10px;
+
+      @media screen and (max-width: $mediaQueries800) {
+        font-size: $paragraphsFontSize * 3;
+      }
+    }
+
+    &::before {
+      content: "";
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: white;
+    }
+  }
+}
+.gridstarter {
+  background: rgba(143, 118, 7, 0.295);
+}
+.startergrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
+  padding: 7em;
+  gap: 0.5em;
+
+  @media screen and (max-width: $mediaQueries800) {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    padding: 2em;
+  }
+
+  & > * {
+    padding: 70px 0;
+    background: white;
+    text-align: center;
+    font-family: $fontTitles1;
+
+    h6 {
+      font-size: $paragraphsFontSize * 0.6;
+      margin-bottom: 10px;
+
+      @media screen and (max-width: $mediaQueries450) {
+        font-size: $paragraphsFontSize * 1;
+      }
+    }
+    p {
+      font-size: $paragraphsFontSize * 0.3;
+      padding: 0 1em;
+
+      @media screen and (max-width: $mediaQueries450) {
+        font-size: $paragraphsFontSize * 0.7;
+      }
+    }
+  }
+  div:nth-child(1) {
+    background: url("../assets/resto/meals/starter1.jpg");
+    background-position: center;
+    background-size: cover;
+    grid-area: 1/1;
+    transition-delay: 0.5s;
+  }
+  div:nth-child(3) {
+    background: url("../assets/resto/meals/sarter2.jpg");
+    background-position: center;
+    background-size: cover;
+    transition-delay: 0.5s;
+
+    @media screen and (max-width: $mediaQueries800) {
+      grid-area: 2/ 2;
+    }
+  }
+  div:nth-child(4) {
+    @media screen and (max-width: $mediaQueries800) {
+      grid-area: 2/1;
+    }
+  }
+  div:nth-child(5) {
+    background: url("../assets/resto/meals/starter3.jpg");
+    background-position: center;
+    background-size: cover;
+    grid-area: 2/2;
+    transition-delay: 0.5s;
+
+    @media screen and(max-width: $mediaQueries800) {
+      grid-area: 3/1;
+    }
+  }
+
+  div:nth-child(7) {
+    background: url("../assets/resto/meals/starter4.jpg");
+    background-position: center;
+    background-size: cover;
+    grid-area: 2/4;
+    transition-delay: 0.5s;
+
+    @media screen and (max-width: $mediaQueries800) {
+      grid-area: 4/ 2;
+    }
+  }
+  div:nth-child(8) {
+    @media screen and (max-width: $mediaQueries800) {
+      grid-area: 4/ 1;
+    }
+  }
+}
+.meals {
+  position: relative;
+
+  h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(143, 118, 7);
+    font-size: 4em;
+    font-family: "Font2";
+    letter-spacing: 10px;
+
+    @media screen and (max-width: $mediaQueries800) {
+      font-size: $paragraphsFontSize * 3;
+    }
+  }
+
+  .meals__title {
+    background: url("../assets/resto/meals/20.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 30vh 0;
+    text-align: center;
+    position: relative;
+
+    @media screen and (max-width: $mediaQueries450) {
+      background-attachment: initial;
+    }
+
+    &::before {
+      content: "";
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: white;
+    }
+  }
+}
+
+.meals__main {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  height: 85vh;
+  align-items: center;
+
+  @media screen and(max-width: $mediaQueries800) {
+    flex-direction: column;
+    height: auto;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(143, 118, 7, 0.3);
+  }
+}
+.meals__main--title {
+  position: absolute;
+  top: 50px;
+  right: 25%;
+  width: 100%;
+
+  h2 {
+    font-size: 3em;
+    letter-spacing: 3px;
+
+    @media screen and (max-width: $mediaQueries800) {
+      z-index: 2;
+      font-size: 4em;
+      width: 80%;
+      top: -85px;
+      left: 75%;
+      background: white;
+      text-align: center;
+    }
+  }
+}
+.meals__main--image {
+  background: url("../assets/resto/meals/0.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40%;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  box-shadow: -20px 20px 0 0 white;
+  line-height: 0;
+  padding: 25vh;
+
+  @media screen and(max-width: $mediaQueries800) {
+    z-index: 1;
+    position: initial;
+    width: 90%;
+    margin: -40px 5px 0 25px;
+  }
+}
+.meals__main--text {
+  width: 45%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: -50vh 10% 0;
+  position: relative;
+  background: rgb(143, 118, 7);
+  padding: 2em;
+
+  @media screen and (max-width: $mediaQueries800) {
+    width: 70%;
+    margin: -30px 5% 0;
+  }
+
+  h3 {
+    margin-bottom: 1em;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+  }
+  ul {
+    text-align: center;
+  }
+}
+#meatMeal {
+  z-index: 2;
+}
+.meals__main--buttons {
+  position: absolute;
+  top: 60%;
+  right: 8%;
+
+  @media screen and (max-width: $mediaQueries800) {
+    position: initial;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    z-index: 8;
+    margin-top: -20px;
+  }
+
+  button {
+    padding: 1em;
+    background: $mainColor;
+    border: none;
+    // width: 120px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    letter-spacing: 1px;
+    border: 1px solid $mainColor;
+    font-size: $paragraphsFontSize * 0.4;
+
+    @media screen and (max-width: $mediaQueries800) {
+      font-size: $paragraphsFontSize * 0.8;
+      border-color: black;
+      z-index: 4;
+    }
+
+    &:hover {
+      background: black;
+      color: $mainColor;
+      letter-spacing: 2px;
+    }
+    &.active {
+      background: black;
+      color: $mainColor;
+    }
+  }
+}
+.meals__main--text__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr 1fr;
+  overflow: hidden;
+
+  li {
+    list-style: none;
+    margin: 0.5em 0 0 0;
+    letter-spacing: 1px;
+
+    @media screen and (max-width: $mediaQueries800) {
+      font-size: $paragraphsFontSize * 0.7;
+    }
+    @media screen and (max-width: $mediaQueries450) {
+      font-size: $paragraphsFontSize * 0.8;
+    }
+
+    &:nth-child(1) {
+      grid-area: 1/1/3/3;
+      transform: translateY(-5vh);
+      opacity: 0;
+
+      &.active {
+        transform: translateY(0);
+        opacity: 1;
+        z-index: 8;
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(4),
+    &:nth-child(6),
+    &:nth-child(8),
+    &:nth-child(10) {
+      text-align: start;
+      transform: translateX(-50vh);
+      opacity: 0;
+      cursor: pointer;
+
+      &.active {
+        transform: translate(0);
+        opacity: 1;
+      }
+    }
+    &:nth-child(3),
+    &:nth-child(5),
+    &:nth-child(7),
+    &:nth-child(9),
+    &:nth-child(11) {
+      text-align: end;
+      transform: translateX(50vh);
+      opacity: 0;
+
+      &.active {
+        transform: translate(0);
+        opacity: 1;
+      }
+    }
+  }
+}
+#fishMeal {
+  position: absolute;
+  background: none;
+  box-shadow: none;
+}
+#vegeMeal {
+  @extend #fishMeal;
+}
+.meals__wine {
+  background: rgba(143, 118, 7, 0.3);
+  text-align: center;
+  font-family: $fontTitles1;
+  padding-bottom: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: $mediaQueries800) {
+    padding-top: 5%;
+  }
+
+  p {
+    font-size: $paragraphsFontSize * 0.5;
+    width: 60%;
+
+    @media screen and (max-width: $mediaQueries450) {
+      font-size: $paragraphsFontSize * 1;
+    }
+  }
+
+  a {
+    padding: 1em 2em;
+    background: $mainColor;
+    border: 1px solid $mainColor;
+    cursor: pointer;
+    margin-top: 1em;
+    transition: 0.5s ease-in-out;
+    font-size: $paragraphsFontSize * 0.5;
+
+    @media screen and (max-width: $mediaQueries800) {
+      font-size: $paragraphsFontSize * 0.7;
+    }
+    @media screen and (max-width: $mediaQueries450) {
+      font-size: $paragraphsFontSize * 0.8;
+    }
+
+    &:hover {
+      background: black;
+      color: $mainColor;
+    }
+  }
+}
+.side__grid {
+  display: flex;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+
+  @media screen and (max-width: $mediaQueries800) {
+    flex-direction: column;
+    height: auto;
+  }
+
+  div {
+    padding: 10%;
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+    transition: 0.5s ease-in-out;
+    position: relative;
+
+    @media screen and (max-width: $mediaQueries800) {
+      padding: 20%;
+    }
+
+    & h3 {
+      line-height: 4;
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      width: 100%;
+      height: 0;
+      transform: translateX(-50%);
+      color: white;
+      padding: 0 3em;
+      transition: 0.5s ease-in-out;
+      background: $mainColor;
+      opacity: 0;
+      letter-spacing: 5px;
+      white-space: nowrap;
+
+      @media screen and (max-width: $mediaQueries800) {
+        text-align: center;
+        font-size: 2.5em;
+      }
+    }
+
+    &:hover {
+      -webkit-filter: none;
+      filter: none;
+      transform: scale(1.1);
+      padding: 12%;
+
+      @media screen and (max-width: $mediaQueries800) {
+        padding: 25%;
+      }
+    }
+
+    &:nth-child(1) {
+      background: url("../assets/resto/meals/aubergine.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &:nth-child(2) {
+      background: url("../assets/resto/meals/chips.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &:nth-child(3) {
+      background: url("../assets/resto/meals/haricots_verts.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &:nth-child(4) {
+      background: url("../assets/resto/meals/pasta.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &:nth-child(5) {
+      background: url("../assets/resto/meals/rice.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+.side {
+  background: black;
+
+  .side__title {
+    padding: 2em 0;
+    text-align: center;
+
+    h3 {
+      font-size: $paragraphsFontSize * 0.7;
+      font-family: $fontTitles1;
+      color: $mainColor;
+      letter-spacing: 10px;
+
+      @media screen and (max-width: $mediaQueries450) {
+        font-size: $paragraphsFontSize * 1.2;
+        letter-spacing: 5px;
+      }
+    }
+  }
+  .side__text {
+    color: white;
+    font-size: $paragraphsFontSize * 0.4;
+    padding: 4em;
+    text-align: center;
+    color: white;
+    font-family: $fontTitles1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      width: 50%;
+
+      @media screen and (max-width: $mediaQueries800) {
+        font-size: $paragraphsFontSize * 1;
+      }
+
+      @media screen and (max-width: $mediaQueries450) {
+        font-size: $paragraphsFontSize * 1.3;
+        width: 70%;
+      }
+    }
+  }
+}
+
+.dessert {
+  position: relative;
+  background-image: url("../assets/resto/meals/backgrid.jpg");
+  background-size: cover;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  padding: 0 0 10vh;
+  font-family: $fontTitles1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+  }
+
+  h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(143, 118, 7);
+    font-size: 4em;
+    font-family: "Font2";
+    letter-spacing: 10px;
+
+    @media screen and (max-width: $mediaQueries800) {
+      font-size: $paragraphsFontSize * 3;
+      line-height: 0.5;
+    }
+  }
+
+  .dessert__title {
+    background: url("../assets/resto/meals/cake_roule.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 30vh 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    @media screen and (max-width: $mediaQueries450) {
+      background-attachment: initial;
+    }
+
+    .dessert__title--image {
+      width: 300px;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media screen and (max-width: $mediaQueries800) {
+        width: auto;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+
+        span {
+          &:first-child {
+            font-size: $paragraphsFontSize * 0.9;
+            color: white;
+          }
+        }
+      }
+
+      span {
+        width: 200px;
+        color: $mainColor;
+        font-size: $paragraphsFontSize * 0.5;
+        margin-top: 15px;
+
+        @media screen and (max-width: $mediaQueries800) {
+          width: 100px;
+        }
+        @media screen and (max-width: $mediaQueries450) {
+          font-size: $paragraphsFontSize * 1;
+          width: 70px;
+          margin-top: 20px;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &::before {
+      content: "";
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: white;
+    }
+  }
+}
+.dessert__grid--title {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+
+  h3,
+  p {
+    padding: 10px 0;
+    letter-spacing: 6px;
+  }
+  h3 {
+    font-size: $paragraphsFontSize * 0.7;
+
+    @media screen and(max-width:$mediaQueries800) {
+      font-size: $paragraphsFontSize * 0.9;
+    }
+    @media screen and (max-width: $mediaQueries450) {
+      font-size: $paragraphsFontSize * 1.5;
+      letter-spacing: 5px;
+    }
+  }
+  p {
+    font-size: $paragraphsFontSize * 0.4;
+
+    @media screen and(max-width:$mediaQueries800) {
+      font-size: $paragraphsFontSize * 0.7;
+    }
+    @media screen and (max-width: $mediaQueries450) {
+      font-size: $paragraphsFontSize * 1.2;
+    }
+  }
+}
+.dessert__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 200px);
+  width: 50%;
+  margin: 10vh auto 0;
+  padding: 5vh;
+  background: rgba(143, 118, 7, 0.5);
+  position: relative;
+
+  @media screen and(max-width: $mediaQueries800) {
+    width: 90%;
+  }
+
+  @media screen and (max-width: $mediaQueries450) {
+    padding: 2vh;
+  }
+  div > * {
+    padding: 10% 0;
+  }
+
+  .dessert__grid--image {
+    position: relative;
+
+    .dessert__grid--text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      transition: 0.3s ease-in;
+      height: 100%;
+      text-align: center;
+
+      p {
+        font-size: 2em;
+        color: $mainColor;
+        padding: 1em;
+
+        @media screen and(max-width: $mediaQueries800) {
+          font-size: 4em;
+        }
+      }
+    }
+    &:nth-child(1) {
+      grid-area: 1/1/2/2;
+      background: url("../assets/resto/meals/chocolat_trio.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &:nth-child(2) {
+      grid-area: 1/2/2/3;
+      background: url("../assets/resto/meals/tiramisu.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &:nth-child(3) {
+      grid-area: 2/1/3/2;
+      background: url("../assets/resto/meals/cake_roule.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &:nth-child(4) {
+      grid-area: 2/2/3/3;
+      background: url("../assets/resto/meals/cafegourmant.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &:nth-child(5) {
+      grid-area: 3/1/4/2;
+      background: url("../assets/resto/meals/dessertbaie.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &:nth-child(6) {
+      grid-area: 3/2/4/3;
+      background: url("../assets/resto/meals//tartecitron.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.revealScroll {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: 1s cubic-bezier(0.5, 0, 0, 1);
+}
+.revealRestoLeft {
+  opacity: 0;
+  transform: translate(10%, 10%);
+}
+.revealRestoRight {
+  opacity: 0;
+  transform: translate(-10%, -10%);
+}
+.revealRestoBottom {
+  opacity: 0;
+  transform: translatey(10%);
+}

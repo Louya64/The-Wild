@@ -1,0 +1,532 @@
+// ---------------------------START BAR-------------------------------------
+
+// BODY BAR
+
+.body-bar {
+	@media screen and (min-width: $mediaQueries800) {
+		cursor: none;	
+	}
+}
+
+.cursor {
+	@media screen and (min-width: $mediaQueries800) {
+		z-index: 1000;
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+		border: 2px solid white;
+		animation: borderAnim 4s ease-in-out infinite alternate;
+		pointer-events: none;
+		transition: transform 0.4s ease-in-out;	
+	}
+}
+
+.hovered {
+	@media screen and (min-width: $mediaQueries800) {
+		background-size: cover;
+		transform: scale(5);	
+	}
+}
+
+@keyframes borderAnim {
+	0% {
+		border-radius: 32% 68% 27% 73% / 66% 59% 41% 34%;
+	}
+	100% {
+		border-radius: 59% 41% 37% 63% / 54% 53% 47% 46%;
+	}
+}
+
+@keyframes wineAnim {
+	0% {
+		transform: rotate(0);
+	}
+	33% {
+		transform: rotate(45deg);
+	}
+	66% {
+		transform: rotate(-45deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+// FIRST SECTION
+
+.first-section {
+	background: $darkness, url(../assets/bar/bar.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+
+	@media screen and (min-width: $mediaQueries800) {
+		background-attachment: fixed;
+	}
+
+	.first-section__title {
+		color: $mainColor;
+		font-family: $fontTitles1, Arial, Helvetica, sans-serif;
+		font-size: $paragraphsFontSize * 3;
+		position: absolute;
+		top: 65%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+// LITTLE PRESENTATION
+
+.little-presentation {
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 20px 0 20px;
+	text-align: center;
+	font-size: 1.3em;
+	font-family: $fontTitles1, Arial, Helvetica, sans-serif;
+}
+
+// COCKTAILS SECTION
+
+.cocktails {
+	.cocktails__img {
+		height: 150px;
+		background: $darkness, url(../assets/bar/Cocktails/mojito.jpg);
+		background-size: cover;
+		background-position: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@media screen and (min-width: $mediaQueries800) {
+			height: 250px;
+		}
+
+		@media screen and (min-width: $mediaQueries1200) {
+			height: 300px;
+		}
+
+		h2 {
+			color: $mainColor;
+			font-family: $fontTitles2, Arial, Helvetica, sans-serif;
+			font-size: 4em;
+		}
+	}
+}
+
+.cocktails__ListAndPrice {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	font-size: 1.5em;
+
+	li {
+		list-style: none;
+		padding-top: 20px;
+	}
+
+	.cocktails-price {
+		text-align: right;
+	}
+}
+
+// WINE SECTION
+
+.wine {
+	.wine__img {
+		height: 150px;
+		background: $darkness, url(../assets/bar/Vins/wine.jpg);
+		background-size: cover;
+		background-position: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@media screen and (min-width: $mediaQueries800) {
+			height: 250px;
+		}
+
+		@media screen and (min-width: $mediaQueries1200) {
+			height: 300px;
+		}
+
+		h2 {
+			color: $mainColor;
+			font-family: $fontTitles2, Arial, Helvetica, sans-serif;
+			font-size: 4em;
+		}
+	}
+
+	.wine__list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+		padding: 20px 0 20px 0;
+
+		// WINE TEXT
+
+		.red-wine-txt {
+			grid-column-start: 2;
+			grid-column-end: 3;
+			grid-row-start: 1;
+			grid-row-end: 2;
+			justify-self: center;
+			align-self: center;
+			font-size: 1.7em;
+			font-family: $fontTitles2, Arial, Helvetica, sans-serif;
+			transition: 0.5s ease-in-out;
+
+			@media screen and (min-width: 659px) {
+				font-size: 2.6em;
+			}
+
+			&:hover {
+				color: $mainColor;
+				letter-spacing: 5px;
+			}
+		}
+
+		.rose-txt {
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 2;
+			grid-row-end: 3;
+			justify-self: center;
+			align-self: center;
+			font-size: 1.7em;
+			font-family: $fontTitles2, Arial, Helvetica, sans-serif;
+			transition: 0.5s ease-in-out;
+
+			@media screen and (min-width: 659px) {
+				font-size: 2.6em;
+			}
+
+			&:hover {
+				color: $mainColor;
+				letter-spacing: 5px;
+			}
+		}
+
+		.white-wine-txt {
+			grid-column-start: 2;
+			grid-column-end: 3;
+			grid-row-start: 3;
+			grid-row-end: 4;
+			justify-self: center;
+			align-self: center;
+			font-size: 1.7em;
+			font-family: $fontTitles2, Arial, Helvetica, sans-serif;
+			transition: 0.5s ease-in-out;
+
+			@media screen and (min-width: 659px) {
+				font-size: 2.6em;
+			}
+
+			&:hover {
+				color: $mainColor;
+				letter-spacing: 5px;
+			}
+		}
+
+		.champagne-txt {
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 4;
+			grid-row-end: 5;
+			justify-self: center;
+			align-self: center;
+			font-size: 1.7em;
+			font-family: $fontTitles2, Arial, Helvetica, sans-serif;
+			transition: 0.5s ease-in-out;
+
+			@media screen and (min-width: 659px) {
+				font-size: 2.6em;
+			}
+
+			&:hover {
+				color: $mainColor;
+				letter-spacing: 5px;
+			}
+		}
+
+		// WINE IMG
+
+		.red-wine-img {
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 1;
+			grid-row-end: 2;
+			background-image: url(../assets/bar/Vins/red-wine.png);
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			height: 150px;
+
+			&:hover {
+				animation: wineAnim 3s ease-in-out infinite alternate;
+			}
+		}
+
+		.rose-img {
+			grid-column-start: 2;
+			grid-column-end: 3;
+			grid-row-start: 2;
+			grid-row-end: 3;
+			background-image: url(../assets/bar/Vins/Webp.net-resizeimage.png);
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			
+			&:hover {
+				animation: wineAnim 3s ease-in-out infinite alternate;
+			}
+		}
+
+		.white-wine-img {
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 3;
+			grid-row-end: 4;
+			background-image: url(../assets/bar/Vins/white-wine-removebg-preview.png);
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+
+			&:hover {
+				animation: wineAnim 3s ease-in-out infinite alternate;
+			}
+		}
+
+		.champagne-img {
+			grid-column-start: 2;
+			grid-column-end: 3;
+			grid-row-start: 4;
+			grid-row-end: 5;
+			background-image: url(../assets/bar/Vins/champagne.png);
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+
+			&:hover {
+				animation: wineAnim 3s ease-in-out infinite alternate;
+			}
+		}
+
+		// MODAL
+
+		.modal-red-wine,
+		.modal-rose,
+		.modal-white-wine,
+		.modal-champagne {
+			display: none;
+			position: fixed;
+			z-index: 10;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+
+			.modal-content {
+				background-color: black;
+				color: white;
+				margin: 50px auto;
+				border: 1px #888;
+				width: 80%;
+				height: 90%;
+				position: relative;
+				border-radius: 15px;
+
+				@media screen and (min-width: $mediaQueries800) {
+					padding: 0 50px 0 50px;
+					width: 60%;
+					height: 80%;
+					top: 10%;
+				}
+
+				h3 {
+					text-align: center;
+					font-size: 30px;
+					text-transform: uppercase;
+					padding-top: 15px;
+				}
+
+				.close-red-wine,
+				.close-rose,
+				.close-white-wine,
+				.close-champagne {
+					color: #aaa;
+					position: absolute;
+					right: 10px;
+					cursor: pointer;
+					font-size: 30px;
+					font-weight: bold;
+				}
+
+				.wine__modal-red-wine__tables,
+				.wine__modal-red-wine__tables,
+				.wine__modal-rose__tables,
+				.wine__modal-champagne__tables {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+
+					.wine__modal-red-wine__tables--bdx,
+					.wine__modal-red-wine__tables--bourgogne,
+					.wine__modal-red-wine__tables--rhone,
+					.wine__modal-white-wine__tables--bdx,
+					.wine__modal-white-wine__tables--bourgogne,
+					.wine__modal-white-wine__tables--loire,
+					.wine__modal-rose__tables--roses,
+					.wine__modal-champagne__tables--champagne {
+						margin-top: 10px;
+						width: 100%;
+
+						.title-wine {
+							padding-bottom: 10px;
+							text-transform: uppercase;
+							font-weight: bold;
+							text-align: center;
+						}
+
+						.name-wine {
+							text-align: left;
+							font-weight: normal;
+							line-height: 1.5em;
+							padding-left: 10px;
+							padding-right: 5px;
+						}
+
+						.price-wine {
+							text-align: right;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// REVEAL WINE SECTION
+
+.reveal {
+	opacity: 0;
+	transform: translateY(50%);
+}
+
+.reveal-visible {
+	opacity: 1;
+	transform: translateY(0);
+	transition: transform 1s;
+}
+
+// SOFTS SECTION
+
+.softs {
+	&__img {
+		height: 150px;
+		background: $darkness, url(../assets/bar/Softs/smoothies-3176371_1280.jpg);
+		background-size: cover;
+		background-position: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@media screen and (min-width: $mediaQueries800) {
+			height: 250px;
+			background-attachment: fixed;
+		}
+
+		@media screen and (min-width: $mediaQueries1200) {
+			height: 300px;
+		}
+
+		h2 {
+			color: $mainColor;
+			font-family: $fontTitles2, Arial, Helvetica, sans-serif;
+			font-size: 4em;
+		}
+	}
+}
+
+.softs__list {
+	display: grid;
+	grid-template-columns: 80% 20%;
+	grid-template-rows: repeat(11, 1fr);
+	padding-left: 15%;
+	padding-right: 15%;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	margin: 20px 0 20px 0;
+
+	.softs-title {
+		grid-area: 1 / 1 / 2 / 3;
+	}
+
+	.center {
+		align-self: center;
+		justify-self: center;
+		font-family: $fontTitles2, Arial, Helvetica, sans-serif;
+		font-size: 1.5em;
+		@media screen and (min-width: 711px){
+			padding: 20px 0 20px 0;
+			font-size: 2em;
+		}
+	}
+
+	.left {
+		align-self: center;
+		justify-self: left;
+	}
+
+	.right {
+		align-self: center;
+		justify-self: right;
+	}
+
+	.smoothies-title {
+		grid-area: 8 / 1 / 9 / 3;
+	}
+
+	.coca {
+		grid-area: 2 / 1 / 3 / 2;
+	}
+
+	.sprite {
+		grid-area: 3 / 1 / 4 / 2;
+	}
+
+	.icetea {
+		grid-area: 4 / 1 / 5 / 2;
+	}
+
+	.schweppes {
+		grid-area: 5 / 1 / 6 / 2;
+	}
+
+	.fanta {
+		grid-area: 6 / 1 / 7 / 2;
+	}
+
+	.jus {
+		grid-area: 7 / 1 / 8 / 2;
+	}
+
+	.pomme {
+		grid-area: 9 / 1 / 10 / 2;
+	}
+
+	.mangue {
+		grid-area: 10 / 1 / 11 / 2;
+	}
+
+	.orange {
+		grid-area: 11 / 1 / 12 / 2;
+	}
+}
+
+// ---------------------------END BAR-------------------------------------

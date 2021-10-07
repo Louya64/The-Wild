@@ -1,0 +1,133 @@
+// Hero-header caroussel
+.caroussel {
+  height: 100vh;
+  position: relative;
+
+  .caroussel__chevron {
+    position: absolute;
+    font-size: 4em;
+    position: absolute;
+    font-size: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+
+    @media screen and (max-width: $mediaQueries800) {
+      opacity: 1;
+    }
+
+    img {
+      width: 0.6em;
+
+      cursor: pointer;
+    }
+    &.right {
+      right: 0;
+    }
+    &.down {
+      padding-top: 90vh;
+      left: 50%;
+      opacity: 1;
+      font-size: 2.5em;
+      transform: translateX(-50%);
+      -webkit-animation: revealInfine 1s infinite;
+      animation: 1s linear 1s infinite alternate revealInfine;
+
+      &:hover {
+        font-size: 3.5em;
+      }
+
+      @-webkit-keyframes revealInfine {
+        from {
+          opacity: 0.3;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes revealInfine {
+        from {
+          opacity: 0.3;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.caroussel__container {
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: 1s ease-in-out;
+  font-family: $fontTitles1;
+
+  &:first-child {
+    opacity: 1;
+  }
+
+  .caroussel__container__image {
+    padding: 50vh 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    transition: 1s ease-in-out;
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+    position: relative;
+  }
+
+  .caroussel__container__title {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1em;
+    color: $mainColor;
+    text-align: center;
+    z-index: 1;
+
+    p {
+      font-size: $paragraphsFontSize * 0.8;
+
+      @media screen and (max-width: $mediaQueries800) {
+        font-size: $paragraphsFontSize * 1.5;
+      }
+      @media screen and (max-width: $mediaQueries450) {
+        font-size: $paragraphsFontSize * 1.9;
+      }
+    }
+
+    a {
+      padding: 1em;
+      cursor: pointer;
+      background: $colorBgBtns;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.5s ease-in-out;
+      font-size: $paragraphsFontSize * 0.4;
+      letter-spacing: 5px;
+      border: 1px solid $colorBgBtns;
+      line-height: 4;
+
+      @media screen and (max-width: $mediaQueries800) {
+        font-size: $paragraphsFontSize * 0.8;
+      }
+
+      &:hover {
+        background: $black;
+        color: $white;
+      }
+    }
+  }
+}

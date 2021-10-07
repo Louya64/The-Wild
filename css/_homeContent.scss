@@ -1,0 +1,233 @@
+body {
+	background-color: $bgMainColor;
+}
+.homeIntro {
+	margin: 10vh auto;
+	text-align: center;
+	font-family: $police1;
+	border: 2px solid $mainColor;
+	border-radius: 50%;
+	padding: 8vh 6vw 5vh 6vw;
+	box-shadow: 2px 2px 15px $black;
+	font-size: 16px;
+	@media screen and (min-width: $mediaQueries800) {
+		margin: 12vh 5vw;
+		padding: 3vh 5vw;
+		font-size: $paragraphsFontSize * 0.5;
+	}
+	@media screen and (min-width: $mediaQueries1200) {
+		margin: 5vh 15vw 10vh 3vw;
+		padding: 3vh 5vw;
+		font-size: $paragraphsFontSize * 0.4;
+	}
+	& h2 {
+		margin-bottom: 2vw;
+		color: $mainColor;
+		font-size: $paragraphsFontSize * 1.8;
+		font-family: $fontTitles2;
+	}
+	&__text {
+		padding-bottom: 1vh;
+	}
+}
+
+.home-restau {
+	position: relative;
+	text-align: center;
+	display: grid;
+	grid-template-columns: 2fr 2fr 3fr;
+	grid-template-rows: 2fr 1fr;
+	font-weight: bold;
+	color: $black;
+	@media screen and (max-width: $mediaQueries800) {
+		width: 80vw;
+	}
+	@media screen and (max-width: $mediaQueries1200) {
+		font-size: $paragraphsFontSize * 0.5;
+	}
+	& img {
+		@media screen and (max-width: $mediaQueries800) {
+			display: none;
+		}
+	}
+	&__bg {
+		width: 100%;
+		height: 100%;
+		background: $darkness, url("../assets/home/content/home-restau-bg.jpg");
+		position: absolute;
+		background-attachment: fixed;
+		background-size: cover;
+		opacity: 0.3;
+		z-index: -1;
+		@media screen and (max-width: $mediaQueries800) {
+			background: $darkness,
+				url("../assets/home/content/home-restau-saumon.jpg");
+			opacity: 0.3;
+			background-size: contain;
+		}
+	}
+	&__img {
+		width: 90%;
+		padding: 0 1vw;
+	}
+	&__img1 {
+		padding-top: 8vw;
+		grid-column: 1/2;
+		grid-row: 1/2;
+	}
+	&__img2 {
+		padding-top: 8vw;
+		grid-column: 2/3;
+		grid-row: 1/2;
+	}
+	&__img3 {
+		padding-bottom: 8vw;
+		grid-column: 1/2;
+		grid-row: 2/3;
+	}
+	&__img4 {
+		padding-bottom: 8vw;
+		grid-column: 2/3;
+		grid-row: 2/3;
+	}
+	&__text1 {
+		grid-column: 3/4;
+		grid-row: 1/2;
+		padding: 0 1vw;
+		line-height: $paragraphsFontSize * 0.6;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		@media screen and (max-width: $mediaQueries800) {
+			grid-column: 1/4;
+			font-size: 16px;
+			line-height: normal;
+			padding-left: 10vw;
+			padding-right: 10vw;
+			padding-top: 10vh;
+		}
+		@media screen and (max-width: 450px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		& h2 {
+			margin-bottom: 2vw;
+			color: $mainColor;
+			font-size: $paragraphsFontSize * 1.8;
+			font-family: $fontTitles2;
+			@media screen and (max-width: $mediaQueries800) {
+				position: absolute;
+				background-color: $black;
+				top: -6vh;
+				left: 0;
+				width: 100vw;
+				padding: 3vh 0;
+				margin: 0 !important;
+				text-align: center;
+				font-size: 30px !important;
+			}
+			@media screen and (max-width: $mediaQueries1200) {
+				font-size: $paragraphsFontSize;
+			}
+		}
+	}
+	&__text2 {
+		grid-column: 3/4;
+		grid-row: 2/3;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		@media screen and (max-width: $mediaQueries800) {
+			grid-column: 1/4;
+			font-size: 16px;
+			line-height: normal;
+			padding-bottom: 10vw;
+		}
+	}
+}
+
+.home-bar {
+	position: relative;
+	margin: 35vh auto;
+	display: flex;
+	text-align: center;
+	@media screen and (max-width: $mediaQueries1200) {
+		font-size: $paragraphsFontSize * 0.5;
+	}
+	@media screen and (max-width: $mediaQueries800) {
+		flex-direction: column;
+		align-items: flex-end;
+		font-weight: bold;
+		font-size: 16px;
+		width: 80vw;
+		margin-right: 0;
+	}
+	&__bg {
+		display: none;
+		@media screen and (max-width: $mediaQueries800) {
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background-attachment: fixed;
+			z-index: -1;
+			bottom: 0;
+			background: $darkness, url("../assets/home/content/home-bar-bg.jpg");
+			opacity: 0.3;
+			background-size: contain;
+		}
+	}
+	& img {
+		@media screen and (max-width: $mediaQueries800) {
+			display: none;
+		}
+	}
+	&__container {
+		width: 40%;
+		@media screen and (max-width: $mediaQueries800) {
+			padding-top: 10vh;
+			margin-right: 0;
+			width: 80vw;
+		}
+		& h2 {
+			margin-bottom: 2vw;
+			color: $mainColor;
+			font-size: $paragraphsFontSize * 1.8;
+			font-family: $fontTitles2;
+			@media screen and (max-width: $mediaQueries800) {
+				position: absolute;
+				background-color: $black;
+				top: -6vh;
+				left: -20vw;
+				width: 100vw;
+				padding: 3vh 0;
+				margin: 0 !important;
+				text-align: center;
+				font-size: 30px !important;
+			}
+			@media screen and (max-width: $mediaQueries1200) {
+				font-size: $paragraphsFontSize;
+			}
+		}
+		& img {
+			width: 100%;
+		}
+	}
+	&__containerImg {
+		width: 60%;
+		@media screen and (max-width: $mediaQueries800) {
+			width: 80vw;
+			padding-bottom: 10vh;
+		}
+		img {
+			width: 45%;
+			height: auto;
+			padding: 0 2vw;
+			margin-bottom: 10vh;
+		}
+	}
+	p {
+		padding: 2vh 2vw;
+	}
+}
