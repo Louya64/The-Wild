@@ -2272,7 +2272,12 @@ img {
   height: 100vh;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+}
+
+@media screen and (min-width: 800px) {
+  .first-section {
+    background-attachment: fixed;
+  }
 }
 
 .first-section .first-section__title {
