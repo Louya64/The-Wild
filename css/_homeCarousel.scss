@@ -14,8 +14,12 @@
     opacity: 0;
     transition: 0.5s ease-in-out;
 
+    @media screen and (max-width: $mediaQueries800) {
+      opacity: 1;
+    }
+
     img {
-      width: 0.3em;
+      width: 0.6em;
 
       cursor: pointer;
     }
@@ -23,7 +27,7 @@
       right: 0;
     }
     &.down {
-      padding-top: 70vh;
+      padding-top: 80vh;
       left: 50%;
       opacity: 1;
       font-size: 2.5em;
@@ -77,12 +81,13 @@
     background-position-x: center;
     transition: 1s ease-in-out;
     -webkit-filter: brightness(0.5);
-    filter: brightness(0.7);
+    filter: brightness(0.5);
     position: relative;
   }
+
   .caroussel__container__title {
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 1em;
@@ -90,7 +95,18 @@
     text-align: center;
     z-index: 1;
 
-    button {
+    p {
+      font-size: $paragraphsFontSize * 0.8;
+
+      @media screen and (max-width: $mediaQueries800) {
+        font-size: $paragraphsFontSize * 1.5;
+      }
+      @media screen and (max-width: $mediaQueries450) {
+        font-size: $paragraphsFontSize * 1.9;
+      }
+    }
+
+    a {
       padding: 1em;
       cursor: pointer;
       background: $colorBgBtns;
@@ -98,9 +114,14 @@
       border-radius: 25px;
       cursor: pointer;
       transition: 0.5s ease-in-out;
-      font-size: 0.3em;
+      font-size: $paragraphsFontSize * 0.4;
       letter-spacing: 5px;
       border: 1px solid $colorBgBtns;
+      line-height: 4;
+
+      @media screen and (max-width: $mediaQueries800) {
+        font-size: $paragraphsFontSize * 0.8;
+      }
 
       &:hover {
         background: $black;

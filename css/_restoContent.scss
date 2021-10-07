@@ -176,6 +176,10 @@ img {
     text-align: center;
     position: relative;
 
+    @media screen and (max-width: $mediaQueries450) {
+      background-attachment: initial;
+    }
+
     h2 {
       position: absolute;
       top: 50%;
@@ -320,6 +324,10 @@ img {
     text-align: center;
     position: relative;
 
+    @media screen and (max-width: $mediaQueries450) {
+      background-attachment: initial;
+    }
+
     &::before {
       content: "";
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
@@ -444,13 +452,15 @@ img {
     padding: 1em;
     background: $mainColor;
     border: none;
-    width: 120px;
+    // width: 120px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
     letter-spacing: 1px;
     border: 1px solid $mainColor;
+    font-size: $paragraphsFontSize * 0.4;
 
     @media screen and (max-width: $mediaQueries800) {
+      font-size: $paragraphsFontSize * 0.8;
       border-color: black;
       z-index: 4;
     }
@@ -558,13 +568,21 @@ img {
     }
   }
 
-  button {
+  a {
     padding: 1em 2em;
     background: $mainColor;
     border: 1px solid $mainColor;
     cursor: pointer;
     margin-top: 1em;
     transition: 0.5s ease-in-out;
+    font-size: $paragraphsFontSize * 0.5;
+
+    @media screen and (max-width: $mediaQueries800) {
+      font-size: $paragraphsFontSize * 0.7;
+    }
+    @media screen and (max-width: $mediaQueries450) {
+      font-size: $paragraphsFontSize * 0.8;
+    }
 
     &:hover {
       background: black;
@@ -712,6 +730,10 @@ img {
   background-repeat: no-repeat;
   padding: 0 0 10vh;
   font-family: $fontTitles1;
+
+  @media screen and (max-width: $mediaQueries450) {
+    background-attachment: initial;
+  }
 
   &::before {
     content: "";

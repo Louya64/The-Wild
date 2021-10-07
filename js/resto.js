@@ -92,28 +92,29 @@ for (let i = 0; i < mealsMeatList.length; i++) {
   }
 }
 const mealInfos = document.querySelectorAll(".meals__main--text__grid > li");
-
 let result = [].filter.call(mealInfos, function (el) {
   return !el.classList.contains("titlemeal");
 });
-console.log(result);
+
 for (let i = 0; i < result.length; i++) {
-  result[i].addEventListener("click", (e) => {
-    console.log(i);
-    // modif de l'image a chaque plat selectionné
-    if (i % 2 == 0) {
+  if (i % 2 == 0) {
+    result[i].addEventListener("click", (e) => {
+      console.log(i);
+      // modif de l'image a chaque plat selectionné
+
       document.querySelector(
         ".meals__main--image"
       ).style.backgroundImage = `url(assets/resto/meals/${i}.jpg)`;
       document.getElementById("title_meal").innerHTML = e.target.textContent; //modif titre a chaque plat selectionné
-    }
-  });
-  mealInfos[i].addEventListener("mouseover", () => {
-    mealInfos[i].style.color = "white";
-  });
-  mealInfos[i].addEventListener("mouseout", () => {
-    mealInfos[i].style.color = "black";
-  });
+    });
+    result[i].addEventListener("mouseover", () => {
+      result[i].style.color = "white";
+      console.log(i);
+    });
+    result[i].addEventListener("mouseout", () => {
+      result[i].style.color = "black";
+    });
+  }
 }
 
 // reveal titre accompagenement plats
