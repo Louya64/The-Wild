@@ -2,12 +2,6 @@
 
 // BODY BAR
 
-.body-bar {
-	@media screen and (min-width: $mediaQueries800) {
-		cursor: none;	
-	}
-}
-
 .cursor {
 	@media screen and (min-width: $mediaQueries800) {
 		z-index: 1000;
@@ -19,6 +13,12 @@
 		animation: borderAnim 4s ease-in-out infinite alternate;
 		pointer-events: none;
 		transition: transform 0.4s ease-in-out;	
+	}
+}
+
+.body-bar {
+	@media screen and (min-width: $mediaQueries800) {
+		cursor: none;	
 	}
 }
 
