@@ -2,6 +2,12 @@
 
 // BODY BAR
 
+.body-bar {
+	@media screen and (min-width: $mediaQueries800) {
+		cursor: none;	
+	}
+}
+
 .cursor {
 	@media screen and (min-width: $mediaQueries800) {
 		z-index: 1000;
@@ -13,12 +19,6 @@
 		animation: borderAnim 4s ease-in-out infinite alternate;
 		pointer-events: none;
 		transition: transform 0.4s ease-in-out;	
-	}
-}
-
-.body-bar {
-	@media screen and (min-width: $mediaQueries800) {
-		cursor: none;	
 	}
 }
 
@@ -35,6 +35,21 @@
 	}
 	100% {
 		border-radius: 59% 41% 37% 63% / 54% 53% 47% 46%;
+	}
+}
+
+@keyframes wineAnim {
+	0% {
+		transform: rotate(0);
+	}
+	33% {
+		transform: rotate(45deg);
+	}
+	66% {
+		transform: rotate(-45deg);
+	}
+	100% {
+		transform: rotate(0);
 	}
 }
 
@@ -161,9 +176,9 @@
 			grid-row-end: 2;
 			justify-self: center;
 			align-self: center;
-			// cursor: pointer;
 			font-size: 1.7em;
 			font-family: $fontTitles2, Arial, Helvetica, sans-serif;
+			transition: 0.5s ease-in-out;
 
 			@media screen and (min-width: 659px) {
 				font-size: 2.6em;
@@ -171,6 +186,7 @@
 
 			&:hover {
 				color: $mainColor;
+				letter-spacing: 5px;
 			}
 		}
 
@@ -181,9 +197,9 @@
 			grid-row-end: 3;
 			justify-self: center;
 			align-self: center;
-			// cursor: pointer;
 			font-size: 1.7em;
 			font-family: $fontTitles2, Arial, Helvetica, sans-serif;
+			transition: 0.5s ease-in-out;
 
 			@media screen and (min-width: 659px) {
 				font-size: 2.6em;
@@ -191,6 +207,7 @@
 
 			&:hover {
 				color: $mainColor;
+				letter-spacing: 5px;
 			}
 		}
 
@@ -201,9 +218,9 @@
 			grid-row-end: 4;
 			justify-self: center;
 			align-self: center;
-			// cursor: pointer;
 			font-size: 1.7em;
 			font-family: $fontTitles2, Arial, Helvetica, sans-serif;
+			transition: 0.5s ease-in-out;
 
 			@media screen and (min-width: 659px) {
 				font-size: 2.6em;
@@ -211,6 +228,7 @@
 
 			&:hover {
 				color: $mainColor;
+				letter-spacing: 5px;
 			}
 		}
 
@@ -221,9 +239,9 @@
 			grid-row-end: 5;
 			justify-self: center;
 			align-self: center;
-			// cursor: pointer;
 			font-size: 1.7em;
 			font-family: $fontTitles2, Arial, Helvetica, sans-serif;
+			transition: 0.5s ease-in-out;
 
 			@media screen and (min-width: 659px) {
 				font-size: 2.6em;
@@ -231,6 +249,7 @@
 
 			&:hover {
 				color: $mainColor;
+				letter-spacing: 5px;
 			}
 		}
 
@@ -246,6 +265,10 @@
 			background-position: center;
 			background-repeat: no-repeat;
 			height: 150px;
+
+			&:hover {
+				animation: wineAnim 3s ease-in-out infinite alternate;
+			}
 		}
 
 		.rose-img {
@@ -257,6 +280,10 @@
 			background-size: contain;
 			background-position: center;
 			background-repeat: no-repeat;
+			
+			&:hover {
+				animation: wineAnim 3s ease-in-out infinite alternate;
+			}
 		}
 
 		.white-wine-img {
@@ -268,6 +295,10 @@
 			background-size: contain;
 			background-position: center;
 			background-repeat: no-repeat;
+
+			&:hover {
+				animation: wineAnim 3s ease-in-out infinite alternate;
+			}
 		}
 
 		.champagne-img {
@@ -279,6 +310,10 @@
 			background-size: contain;
 			background-position: center;
 			background-repeat: no-repeat;
+
+			&:hover {
+				animation: wineAnim 3s ease-in-out infinite alternate;
+			}
 		}
 
 		// MODAL
@@ -386,7 +421,7 @@
 .reveal-visible {
 	opacity: 1;
 	transform: translateY(0);
-	transition: 1s;
+	transition: transform 1s;
 }
 
 // SOFTS SECTION
