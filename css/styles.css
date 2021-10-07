@@ -133,8 +133,8 @@ nav #nav__logoMobil img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transform: translateY(-100vh);
-          transform: translateY(-100vh);
+  -webkit-transform: translateY(-150vh);
+          transform: translateY(-150vh);
   font-family: sans-serif;
   -webkit-transition: 0.4s ease-in;
   transition: 0.4s ease-in;
@@ -1550,7 +1550,7 @@ img {
 @media screen and (max-width: 450px) {
   .presentation__resto__container--image {
     width: 70%;
-    top: 60%;
+    top: 65%;
   }
 }
 
@@ -2635,7 +2635,6 @@ img {
           transform: translatey(10%);
 }
 
-
 @media screen and (min-width: 800px) {
   .body-bar {
     cursor: none;
@@ -2661,7 +2660,6 @@ img {
 }
 
 @media screen and (min-width: 800px) {
-
   .hovered {
     background-size: cover;
     -webkit-transform: scale(5);
