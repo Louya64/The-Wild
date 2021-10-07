@@ -2636,6 +2636,12 @@ img {
 }
 
 @media screen and (min-width: 800px) {
+  .body-bar {
+    cursor: none;
+  }
+}
+
+@media screen and (min-width: 800px) {
   .cursor {
     z-index: 1000;
     position: absolute;
@@ -2650,12 +2656,6 @@ img {
     transition: -webkit-transform 0.4s ease-in-out;
     transition: transform 0.4s ease-in-out;
     transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .body-bar {
-    cursor: none;
   }
 }
 
@@ -2682,6 +2682,44 @@ img {
   }
   100% {
     border-radius: 59% 41% 37% 63% / 54% 53% 47% 46%;
+  }
+}
+
+@-webkit-keyframes wineAnim {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  33% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  66% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes wineAnim {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  33% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  66% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
 }
 
@@ -2841,6 +2879,8 @@ img {
       align-self: center;
   font-size: 1.7em;
   font-family: Font2, Arial, Helvetica, sans-serif;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 @media screen and (min-width: 659px) {
@@ -2851,6 +2891,7 @@ img {
 
 .wine .wine__list .red-wine-txt:hover {
   color: #8f7607;
+  letter-spacing: 5px;
 }
 
 .wine .wine__list .rose-txt {
@@ -2867,6 +2908,8 @@ img {
       align-self: center;
   font-size: 1.7em;
   font-family: Font2, Arial, Helvetica, sans-serif;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 @media screen and (min-width: 659px) {
@@ -2877,6 +2920,7 @@ img {
 
 .wine .wine__list .rose-txt:hover {
   color: #8f7607;
+  letter-spacing: 5px;
 }
 
 .wine .wine__list .white-wine-txt {
@@ -2893,6 +2937,8 @@ img {
       align-self: center;
   font-size: 1.7em;
   font-family: Font2, Arial, Helvetica, sans-serif;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 @media screen and (min-width: 659px) {
@@ -2903,6 +2949,7 @@ img {
 
 .wine .wine__list .white-wine-txt:hover {
   color: #8f7607;
+  letter-spacing: 5px;
 }
 
 .wine .wine__list .champagne-txt {
@@ -2919,6 +2966,8 @@ img {
       align-self: center;
   font-size: 1.7em;
   font-family: Font2, Arial, Helvetica, sans-serif;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 @media screen and (min-width: 659px) {
@@ -2929,6 +2978,7 @@ img {
 
 .wine .wine__list .champagne-txt:hover {
   color: #8f7607;
+  letter-spacing: 5px;
 }
 
 .wine .wine__list .red-wine-img {
@@ -2945,6 +2995,11 @@ img {
   height: 150px;
 }
 
+.wine .wine__list .red-wine-img:hover {
+  -webkit-animation: wineAnim 3s ease-in-out infinite alternate;
+          animation: wineAnim 3s ease-in-out infinite alternate;
+}
+
 .wine .wine__list .rose-img {
   -ms-grid-column: 2;
       grid-column-start: 2;
@@ -2956,6 +3011,11 @@ img {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.wine .wine__list .rose-img:hover {
+  -webkit-animation: wineAnim 3s ease-in-out infinite alternate;
+          animation: wineAnim 3s ease-in-out infinite alternate;
 }
 
 .wine .wine__list .white-wine-img {
@@ -2971,6 +3031,11 @@ img {
   background-repeat: no-repeat;
 }
 
+.wine .wine__list .white-wine-img:hover {
+  -webkit-animation: wineAnim 3s ease-in-out infinite alternate;
+          animation: wineAnim 3s ease-in-out infinite alternate;
+}
+
 .wine .wine__list .champagne-img {
   -ms-grid-column: 2;
       grid-column-start: 2;
@@ -2982,6 +3047,11 @@ img {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.wine .wine__list .champagne-img:hover {
+  -webkit-animation: wineAnim 3s ease-in-out infinite alternate;
+          animation: wineAnim 3s ease-in-out infinite alternate;
 }
 
 .wine .wine__list .modal-red-wine,
@@ -3628,8 +3698,10 @@ img {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
 }
 
 .softs__img {
