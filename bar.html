@@ -11,7 +11,7 @@
 		></script>
 		<title>The Wild - Côté Bar</title>
 	</head>
-	<body>
+	<body class="body-bar">
 		<header>
 			<nav>
 				<div class="toggle-btn">
@@ -45,15 +45,18 @@
 				</div>
 			</nav>
 		</header>
+
+		<div class="cursor"></div>
+
 		<section class="first-section">
 			<h1 class="first-section__title">Côté Bar</h1>
 		</section>
-		<section class="little-presentation">
+		<div class="little-presentation">
 			<p>
 				Découvrez la carte de notre bar avec nottament les merveilleux cocktails
 				et les prestigieuses bouteilles de vin que nous pouvons vous proposer.
 			</p>
-		</section>
+		</div>
 		<section class="cocktails">
 			<div class="cocktails__img">
 				<h2>Nos cocktails</h2>
@@ -68,7 +71,7 @@
 						<li>Moscow Mule</li>
 						<li>London Mule</li>
 						<li>Mojito</li>
-						<li>Pi&ntildea Colada</li>
+						<li>Pi&ntilde;a Colada</li>
 						<li>Sex On The Beach</li>
 						<li>Cosmopolitan</li>
 					</ul>
@@ -101,7 +104,7 @@
 
 				<!-- MODAL RED WINE -->
 
-				<div id="myModal" class="modal-red-wine">
+				<div class="modal-red-wine">
 					<div class="modal-content">
 						<span class="close-red-wine">&times;</span>
 						<h3>Vins rouges</h3>
@@ -220,7 +223,7 @@
 
 				<!-- ROSE MODAL -->
 
-				<div id="myModal" class="modal-rose">
+				<div class="modal-rose">
 					<div class="modal-content">
 						<span class="close-rose">&times;</span>
 						<h3>Rosés</h3>
@@ -256,7 +259,7 @@
 
 				<!-- WHITE WINE MODAL -->
 
-				<div id="myModal" class="modal-white-wine">
+				<div class="modal-white-wine">
 					<div class="modal-content">
 						<span class="close-white-wine">&times;</span>
 						<h3>Vins blancs</h3>
@@ -347,7 +350,7 @@
 
 				<!-- CHAMPAGNE MODAL -->
 
-				<div id="myModal" class="modal-champagne">
+				<div class="modal-champagne">
 					<div class="modal-content">
 						<span class="close-champagne">&times;</span>
 						<h3>Champagnes</h3>
@@ -429,7 +432,30 @@
 			<div class="softs__img">
 				<h2>Nos boissons</h2>
 			</div>
+			<div class="softs__list">
+				<h2 class="softs-title center">Les Softs</h2>
+				<p class="coca left drinks" data-soft="coca">Coca Cola</p>
+				<p class="sprite left drinks" data-soft="sprite">Sprite</p>
+				<p class="icetea left drinks" data-soft="icetea">Ice Tea</p>
+				<p class="schweppes left drinks" data-soft="schweppes">Schweppes</p>
+				<p class="fanta left drinks" data-soft="fanta">Fanta</p>
+				<p class="jus left drinks" data-soft="jus">Jus (Orange, Mangue, Framboise, Fraise)</p>
+				<p class="prix-1 right">7€</p>
+				<p class="prix-2 right">7€</p>
+				<p class="prix-3 right">5€</p>
+				<p class="prix-4 right">7€</p>
+				<p class="prix-5 right">6€</p>
+				<p class="prix-6 right">6€</p>
+				<h2 class="smoothies-title center">Les Smoothies</h2>
+				<p class="pomme left drinks" data-soft="pomme">Pomme, Banane, Fraise</p>
+				<p class="mangue left drinks" data-soft="mangue">Mangue, Fruits de la Passion</p>
+				<p class="orange left drinks" data-soft="orange">Orange, Citron</p>
+				<p class="prix-7 right">8€</p>
+				<p class="prix-8 right">9€</p>
+				<p class="prix-9 right">7€</p>
+			</div>
 		</section>
+
 		<!-- <footer></footer> -->
 		<footer class="footer">
 			<img
@@ -451,7 +477,7 @@
 			<div class="footer__newletter">
 				<form>
 					<label for="email">NewsLetter:</label>
-					<input name="email" type="email" placeholder="Votre Email" />
+					<input id="email" type="email" placeholder="Votre Email" />
 					<input class="btn" type="button" value="S'abonner" />
 				</form>
 			</div>

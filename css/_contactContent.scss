@@ -3,16 +3,17 @@
   height: 25vh;
   background-image: url("../assets/contact/contact2.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; 
+  position: relative; 
 
   h1 {
     padding-left: 1rem;
     position: absolute;
-    top: 20%;
+    bottom: 5%;
     color: white;
   }
 }
-
+ 
 .section_contact {
   display: flex;
   justify-content: space-around;
@@ -63,14 +64,10 @@
 
 .hour_pic {
   width: 100%;
-  //min-height: 25vh;
   height: 25vh;
   background-image: url("../assets/contact/time.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  
-  //background-attachment: fixed;
-  //background-position: center;
 
   h2 {
     padding-left: 1rem;
@@ -80,7 +77,7 @@
   }
 }
 
-table {
+.horaire {
   margin-top: 5rem;
   display: flex;
   justify-content: center;
@@ -88,6 +85,26 @@ table {
     text-align: center;
     padding-right: 5rem;
     padding-bottom: 2rem;
+  }
+}
+
+.link {
+  & h2 {
+    color: $mainColor;
+    padding: 10vh 0 1vh 2vw; 
+    background: url('../assets/contact/Liens.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__container {
+    width: fit-content;
+    margin: 8vh auto;
+    & .linkFriend {
+      text-shadow: 2px 2px 3px $mainColor;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
@@ -109,6 +126,7 @@ table {
     background-image: url("../assets/contact/contact2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 
     h1 {
       padding-left: 1rem;
@@ -128,13 +146,10 @@ table {
 
   .hour_pic {
     width: 100%;
-    //min-height: 25vh;
     height: 25vh;
     background-image: url("../assets/contact/time.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    //background-attachment: fixed;
-    //background-position: center;
 
     h2 {
       padding-left: 1rem;
@@ -143,6 +158,4 @@ table {
       color: white;
     }
   }
-
-
 }

@@ -1,3 +1,26 @@
+// CURSOR
+
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', (e) => {
+    cursor.style.top = `${e.pageY - 30}px`;
+    cursor.style.left = `${e.pageX - 30}px`;
+})
+
+const allDrinks = document.querySelectorAll('.drinks');
+
+allDrinks.forEach(link => {
+    const soft = link.getAttribute('data-soft');
+    link.addEventListener('mouseenter', () => {
+        cursor.classList.add('hovered');
+        cursor.style.backgroundImage = `url(./assets/bar/Softs/${soft}.jpg)`;
+    })
+    link.addEventListener('mouseout', () => {
+        cursor.classList.remove('hovered');
+        cursor.style.backgroundImage = `none`;
+    })
+})
+
 // RED WINE
 
 const modalRedWine = document.querySelector('.modal-red-wine');
