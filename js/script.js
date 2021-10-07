@@ -34,6 +34,11 @@ window.addEventListener("scroll", () => {
     } else {
       menu.style.background = "none"; //je change le style
     }
+  } else {
+    if (scrollY > window.innerHeight) {
+      toggleBtn.style.background = "black";
+    } else {
+      toggleBtn.style.background = "none";
+    }
   }
 });
-
