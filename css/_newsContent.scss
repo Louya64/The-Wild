@@ -146,7 +146,7 @@
     background-size: contain;
     color: transparent;
 
-   p {
+    p {
       display: none;
     }
   }
@@ -201,6 +201,10 @@
     display: grid;
     grid-template-columns: repeat(3, 33%);
     grid-template-rows: repeat(3, 33%);
+
+    & p {
+      font-size: $paragraphsFontSize * 0.4;
+    }
 
     #marketing {
       display: block;
