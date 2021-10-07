@@ -12,8 +12,8 @@
 	@media screen and (min-width: $mediaQueries800) {
 		z-index: 1000;
 		position: absolute;
-		width: 60px;
-		height: 60px;
+		width: 50px;
+		height: 50px;
 		border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 		border: 2px solid white;
 		animation: borderAnim 4s ease-in-out infinite alternate;
@@ -71,6 +71,7 @@
 	padding: 0 20px 0 20px;
 	text-align: center;
 	font-size: 1.3em;
+	font-family: $fontTitles1, Arial, Helvetica, sans-serif;
 }
 
 // COCKTAILS SECTION
