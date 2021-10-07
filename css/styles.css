@@ -4078,6 +4078,9 @@ img {
     -ms-grid-rows: (33%)[3];
         grid-template-rows: repeat(3, 33%);
   }
+  .container p {
+    font-size: 1.6vw;
+  }
   .container #marketing {
     display: block;
   }
