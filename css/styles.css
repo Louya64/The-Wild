@@ -2289,12 +2289,6 @@ img {
   font-family: Font1;
 }
 
-@media screen and (max-width: 450px) {
-  .dessert {
-    background-attachment: initial;
-  }
-}
-
 .dessert::before {
   content: "";
   position: absolute;
@@ -2333,6 +2327,12 @@ img {
   text-align: center;
   position: relative;
   z-index: 1;
+}
+
+@media screen and (max-width: 450px) {
+  .dessert .dessert__title {
+    background-attachment: initial;
+  }
 }
 
 .dessert .dessert__title .dessert__title--image {

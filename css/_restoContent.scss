@@ -731,10 +731,6 @@ img {
   padding: 0 0 10vh;
   font-family: $fontTitles1;
 
-  @media screen and (max-width: $mediaQueries450) {
-    background-attachment: initial;
-  }
-
   &::before {
     content: "";
     position: absolute;
@@ -770,6 +766,10 @@ img {
     text-align: center;
     position: relative;
     z-index: 1;
+
+    @media screen and (max-width: $mediaQueries450) {
+      background-attachment: initial;
+    }
 
     .dessert__title--image {
       width: 300px;
